@@ -3,6 +3,7 @@ package core.basesyntax;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
@@ -69,8 +70,37 @@ public class PlaneTest {
             builderMethods.stream()
                     .filter(m -> m.getName().equalsIgnoreCase("set" + fieldName))
                     .findFirst()
-                    .orElseThrow(() -> new RuntimeException("Setter for " + fieldName + " should be present in builder"));
+                    .orElseThrow(() -> new RuntimeException("Setter for " + fieldName + " field should be present in builder"));
         }
+    }
 
+    @Test
+    public void checkNoSettersArePresentInPlaneClass() {
+        List<Field> planeFields = Arrays.asList(Plane.class.getDeclaredFields());
+        Assert.assertFalse(planeFields.isEmpty());
+
+        List<Method> planerMethods = Arrays.asList(Plane.class.getMethods());
+        for (Field f : planeFields) {
+            String fieldName = f.getName();
+            Optional<Method> method = planerMethods.stream()
+                    .filter(m -> m.getName().equalsIgnoreCase("set" + fieldName))
+                    .findFirst();
+            Assert.assertFalse(String.format("Setter for %s field should NOT be present in Plane class", fieldName), method.isPresent());
+        }
+    }
+
+    @Test
+    public void checkTheOnlyOnePlaneConstructorIsPresent() {
+        List<Field> planeFields = Arrays.asList(Plane.class.getDeclaredFields());
+        Assert.assertFalse(planeFields.isEmpty());
+
+        List<Constructor<?>> constructors = Arrays.asList(Plane.class.getConstructors());
+        Assert.assertEquals("You should have only one constructor in the Plane.class", constructors.size(), 1);
+
+        int actualParameterCount = constructors.get(0).getParameterCount();
+        int expectedParameterCount = planeFields.size();
+
+        Assert.assertEquals("You have a constructor with all fields that exists in the plane",
+                actualParameterCount, expectedParameterCount);
     }
 }
