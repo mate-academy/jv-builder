@@ -49,7 +49,7 @@ public class Plane {
         return wingspan;
     }
 
-    public static class Builder {
+    public static class PlaneBuilder {
 
         private String modelName;
         private int emptyWeight;
@@ -58,37 +58,37 @@ public class Plane {
         private int enginePower;
         private int wingspan;
 
-        public Builder setModelName(String modelName) {
+        public PlaneBuilder setModelName(String modelName) {
             this.modelName = modelName;
 
             return this;
         }
 
-        public Builder setEmptyWeight(int emptyWeight) {
+        public PlaneBuilder setEmptyWeight(int emptyWeight) {
             this.emptyWeight = emptyWeight;
 
             return this;
         }
 
-        public Builder setTakeoffWeight(int takeoffWeight) {
+        public PlaneBuilder setTakeoffWeight(int takeoffWeight) {
             this.takeoffWeight = takeoffWeight;
 
             return this;
         }
 
-        public Builder setCruisingSpeed(int cruisingSpeed) {
+        public PlaneBuilder setCruisingSpeed(int cruisingSpeed) {
             this.cruisingSpeed = cruisingSpeed;
 
             return this;
         }
 
-        public Builder setEnginePower(int enginePower) {
+        public PlaneBuilder setEnginePower(int enginePower) {
             this.enginePower = enginePower;
 
             return this;
         }
 
-        public Builder setWingspan(int wingspan) {
+        public PlaneBuilder setWingspan(int wingspan) {
             this.wingspan = wingspan;
 
             return this;
