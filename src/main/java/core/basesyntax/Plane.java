@@ -13,7 +13,7 @@ public class Plane {
     private int flightRange;
 
     public Plane(String nameOfPlane, int howHigh, int speed,
-        int numberOfSeats, int flightRange) {
+            int numberOfSeats, int flightRange) {
         this.nameOfPlane = nameOfPlane;
         this.howHigh = howHigh;
         this.speed = speed;
