@@ -1,13 +1,18 @@
 package core.basesyntax;
+
 /**
  * Создайте свою собственную реализацию паттерна Builder для класса Plane.
  * Добавьте не менее пяти полей в класс Plane.
  */
-public class Plane {
-    private String brand, color;
-    private int model, speed, productionYear;
 
-    public Plane(String brand, String color, int speed, int model, int productionYear) {
+public class Plane {
+    private String brand;
+    private String color;
+    private int model;
+    private int speed;
+    private int productionYear;
+
+    public Plane(String brand, String color, int model, int speed, int productionYear) {
         this.brand = brand;
         this.color = color;
         this.speed = speed;
