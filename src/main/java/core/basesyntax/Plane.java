@@ -59,30 +59,34 @@ public class Plane {
         private String model;
         private EngineType engineType;
 
-        public void setMaxSpeed(final int maxSpeed) {
+        public PlaneBuilder setMaxSpeed(final int maxSpeed) {
             this.maxSpeed = maxSpeed;
+            return this;
         }
 
-        public void setEngineType(final EngineType engineType) {
+        public PlaneBuilder setEngineType(final EngineType engineType) {
             this.engineType = engineType;
+            return this;
         }
 
-        public void setModel(final String model) {
+        public PlaneBuilder setModel(final String model) {
             this.model = model;
+            return this;
         }
 
-        public void setBrand(final String brand) {
+        public PlaneBuilder setBrand(final String brand) {
             this.brand = brand;
+            return this;
         }
 
-        public void setIssue(final long issue) {
+        public PlaneBuilder setIssue(final long issue) {
             this.issue = issue;
+            return this;
         }
 
         public Plane build() {
             return new Plane(this);
         }
-
     }
 
     static enum EngineType { HeatEngine, ElectricEngine, AirEngine }
