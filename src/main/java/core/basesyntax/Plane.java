@@ -31,20 +31,16 @@ public class Plane {
         name = builder.name;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public int getMaxSpeed() {
         return maxSpeed;
     }
 
-    public double getLength() {
-        return length;
-    }
-
     public String getColor() {
         return color;
+    }
+
+    public double getLength() {
+        return length;
     }
 
     public double getWidth() {
@@ -55,6 +51,10 @@ public class Plane {
         return engines;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public static class PlaneBuilder {
         private int maxSpeed;
         private String color;
@@ -63,35 +63,12 @@ public class Plane {
         private int engines;
         private String name;
 
-        public int getMaxSpeed() {
-            return maxSpeed;
-        }
-
-        public String getColor() {
-            return color;
-        }
-
-        public double getLength() {
-            return length;
-        }
-
-        public double getWidth() {
-            return width;
-        }
-
-        public int getEngines() {
-            return engines;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
         public PlaneBuilder() {
+        }
+
+        public PlaneBuilder setName(String name) {
+            this.name = name;
+            return this;
         }
 
         public PlaneBuilder setMaxSpeed(int maxSpeed) {
