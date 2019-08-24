@@ -12,7 +12,8 @@ public class Plane {
     private int passengerCap;
     private int numberOfWings;
 
-    private Plane(Builder builder) {
+    public Plane(String name, String color, String engineType,
+                 int passengerCap, int numberOfWings) {
         this.name = name;
         this.color = color;
         this.engineType = engineType;
@@ -20,38 +21,47 @@ public class Plane {
         this.numberOfWings = numberOfWings;
     }
 
-    static class Builder {
+    private Plane(PlaneBuilder planeBuilder) {
+        this.name = planeBuilder.name;
+        this.color = planeBuilder.color;
+        this.engineType = planeBuilder.engineType;
+        this.passengerCap = planeBuilder.passengerCap;
+        this.numberOfWings = planeBuilder.numberOfWings;
+    }
+
+    public static class PlaneBuilder {
         private String name;
         private String color;
         private String engineType;
         private int passengerCap;
         private int numberOfWings;
 
-        public Builder(String name) {
+        public PlaneBuilder setName(String name) {
             this.name = name;
+            return this;
         }
 
-        public Builder setColor(String color) {
+        public PlaneBuilder setColor(String color) {
             this.color = color;
             return this;
         }
 
-        public Builder setEngineType(String engineType) {
+        public PlaneBuilder setEngineType(String engineType) {
             this.engineType = engineType;
             return this;
         }
 
-        public Builder setPassengerCap(int passengerCap) {
+        public PlaneBuilder setPassengerCap(int passengerCap) {
             this.passengerCap = passengerCap;
             return this;
         }
 
-        public Builder setNumberOfWings(int numberOfWings) {
+        public PlaneBuilder setNumberOfWings(int numberOfWings) {
             this.numberOfWings = numberOfWings;
             return this;
         }
 
-        public Plane built() {
+        public Plane build() {
             return new Plane(this);
         }
     }
