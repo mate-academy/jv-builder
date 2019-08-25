@@ -12,7 +12,8 @@ public class Plane {
     private final int maxWeightLoad;
     private final int maxFlightSpeed;
 
-    public Plane(String model, String type, int numberOfSeats, int maxWeightLoad, int maxFlightSpeed) {
+    public Plane(String model, String type, int numberOfSeats,
+                 int maxWeightLoad, int maxFlightSpeed) {
         this.model = model;
         this.type = type;
         this.numberOfSeats = numberOfSeats;
