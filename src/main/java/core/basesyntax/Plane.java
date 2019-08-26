@@ -20,12 +20,12 @@ public class Plane {
         this.produce = produce;
     }
 
-    private Plane(PlaneBuilder object) {
-        ceiling = object.ceiling;
-        size = object.size;
-        price = object.price;
-        colour = object.colour;
-        produce = object.produce;
+    private Plane(PlaneBuilder builder) {
+        ceiling = builder.ceiling;
+        size = builder.size;
+        price = builder.price;
+        colour = builder.colour;
+        produce = builder.produce;
     }
 
     public static class PlaneBuilder {
