@@ -34,7 +34,7 @@ public class Plane {
     }
 
     public double getMaxSpeed() {
-        return mass;
+        return maxSpeed;
     }
 
     public double getCrewQuantity() {
@@ -50,40 +50,45 @@ public class Plane {
     }
 
     public static class PlaneBuilder {
-        private Plane newPlane;
+        private String type;
+        private double mass;
+        private double maxSpeed;
+        private int crewQuantity;
+        private boolean military;
+        private Set<Plane> planeSquadron;
 
         public PlaneBuilder setType(String type) {
-            newPlane.type = type;
+            this.type = type;
             return this;
         }
 
         public PlaneBuilder setMass(double mass) {
-            newPlane.mass = mass;
+            this.mass = mass;
             return this;
         }
 
         public PlaneBuilder setMaxSpeed(double maxSpeed) {
-            newPlane.maxSpeed = maxSpeed;
+            this.maxSpeed = maxSpeed;
             return this;
         }
 
         public PlaneBuilder setCrewQuantity(int crewQuantity) {
-            newPlane.crewQuantity = crewQuantity;
+            this.crewQuantity = crewQuantity;
             return this;
         }
 
         public PlaneBuilder setMilitary(boolean military) {
-            newPlane.military = military;
+            this.military = military;
             return this;
         }
 
         public PlaneBuilder setPlaneSquadron(Set<Plane> planeSquadron) {
-            newPlane.planeSquadron = planeSquadron;
+            this.planeSquadron = planeSquadron;
             return this;
         }
 
         public Plane build() {
-            return newPlane;
+            return new Plane(type, mass, maxSpeed, crewQuantity, military, planeSquadron);
         }
 
         public static void main(String[] args) {
