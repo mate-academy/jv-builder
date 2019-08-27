@@ -40,7 +40,7 @@ public class Plane {
     }
 
     public Plane(int capacity, String airlines, String pilot,
-                 HashMap<String, Integer> Seats, HashSet<String> baggage) {
+                 HashMap<String, Integer> seats, HashSet<String> baggage) {
         this.airlines = airlines;
         this.baggage = baggage;
         this.pilot = pilot;
