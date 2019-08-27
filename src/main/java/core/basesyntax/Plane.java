@@ -12,7 +12,7 @@ public class Plane {
     private String type;
     private int carryingCapacity;
 
-    public Plane(String model,int maxSpeed,int numberOfEngines,
+    public Plane(String model, int maxSpeed, int numberOfEngines,
                  String type, int carryingCapacity) {
         this.model = model;
         this.maxSpeed = maxSpeed;
