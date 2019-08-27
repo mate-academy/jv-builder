@@ -14,12 +14,11 @@ public class Plane {
     private int soldTicket;
     private Date releaseDate;
 
-    public Plane(
-            String planeName,
-            String departurePoint,
-            int planeCapacity,
-            int soldTicket,
-            Date releaseDate) {
+    public Plane(String planeName,
+                 String departurePoint,
+                 int planeCapacity,
+                 int soldTicket,
+                 Date releaseDate) {
         this.planeName = planeName;
         this.departurePoint = departurePoint;
         this.planeCapacity = planeCapacity;
@@ -35,8 +34,7 @@ public class Plane {
                 + departurePoint + '\''
                 + ", planeCapacity=" + planeCapacity
                 + ", soldTicket=" + soldTicket
-                + ", releaseDate=" + releaseDate
-                + '}';
+                + ", releaseDate=" + releaseDate + '}';
     }
 
     public static class PlaneBuilder {
@@ -63,9 +61,7 @@ public class Plane {
         }
 
         public PlaneBuilder setSoldTicket(int soltedTickets) {
-            if (soltedTickets <= this.planeCapacity) {
-                this.soldTicket = soltedTickets;
-            }
+            this.soldTicket = soltedTickets;
             return this;
         }
 
