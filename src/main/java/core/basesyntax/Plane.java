@@ -90,15 +90,5 @@ public class Plane {
         public Plane build() {
             return new Plane(type, mass, maxSpeed, crewQuantity, military, planeSquadron);
         }
-
-        public static void main(String[] args) {
-            Plane bestPlane = new Plane.PlaneBuilder()
-                    .setType("Interceptor")
-                    .setMass(30000)
-                    .setMaxSpeed(1000)
-                    .setCrewQuantity(2)
-                    .setMilitary(true)
-                    .build();
-        }
     }
 }
