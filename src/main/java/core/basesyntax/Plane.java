@@ -3,20 +3,20 @@ package core.basesyntax;
 import java.util.HashMap;
 import java.util.HashSet;
 
-public final class Plane {
+public class Plane {
 
     private int capacity;
     private String airlines;
     private String pilot;
-    private HashSet<String> baggages;
-    private HashMap<String, Integer> sits;
+    private HashSet<String> baggage;
+    private HashMap<String, Integer> seats;
 
     private Plane(PlaneBuilder planeBuilder) {
         this.airlines = planeBuilder.airlines;
         this.baggage = planeBuilder.baggage;
         this.pilot = planeBuilder.pilot;
         this.capacity = planeBuilder.capacity;
-        this.sits = planeBuilder.sits;
+        this.seats = planeBuilder.seats;
     }
 
     public int getCapacity() {
@@ -35,17 +35,17 @@ public final class Plane {
         return baggage;
     }
 
-    public HashMap<String, Integer> getSits() {
-        return sits;
+    public HashMap<String, Integer> getSeats() {
+        return seats;
     }
 
     public Plane(int capacity, String airlines, String pilot,
-                 HashMap<String, Integer> sits, HashSet<String> baggage) {
+                 HashMap<String, Integer> Seats, HashSet<String> baggage) {
         this.airlines = airlines;
         this.baggage = baggage;
         this.pilot = pilot;
         this.capacity = capacity;
-        this.sits = sits;
+        this.seats = seats;
     }
 
     public static class PlaneBuilder {
@@ -54,14 +54,11 @@ public final class Plane {
         private String airlines;
         private String pilot;
         private HashSet<String> baggage;
-        private HashMap<String, Integer> sits;
+        private HashMap<String, Integer> seats;
 
-        public PlaneBuilder(int capacity) {
-            this.capacity = capacity;
-        }
 
-        public PlaneBuilder setSits(HashMap<String, Integer> sits) {
-            this.sits = sits;
+        public PlaneBuilder setSeats(HashMap<String, Integer> seats) {
+            this.seats = seats;
             return this;
         }
 
