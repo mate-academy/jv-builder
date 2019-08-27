@@ -44,7 +44,6 @@ public class Plane {
         private int soldTicket;
         private Date releaseDate;
 
-
         public PlaneBuilder setPlaneName(String name) {
             this.planeName = name;
             return this;
