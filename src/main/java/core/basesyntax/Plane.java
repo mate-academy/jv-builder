@@ -62,8 +62,9 @@ public class Plane {
             this.name = name;
         }
 
-        public void setName(String name) {
+        public PlaneBuilder setName(String name) {
             this.name = name;
+            return this;
         }
 
         public PlaneBuilder setColor(String color) {
