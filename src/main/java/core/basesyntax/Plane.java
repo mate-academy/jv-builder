@@ -12,6 +12,22 @@ public class Plane {
     private int length;
     private String modelName;
 
+    public Plane(int seats, int maxSpeed, int weight, int length, String modelName) {
+        this.seats = seats;
+        this.maxSpeed = maxSpeed;
+        this.weight = weight;
+        this.length = length;
+        this.modelName = modelName;
+    }
+
+    private Plane(PlaneBuilder builder) {
+        seats = builder.seats;
+        maxSpeed = builder.maxSpeed;
+        weight = builder.weight;
+        length = builder.length;
+        modelName = builder.modelName;
+    }
+    
     public static class PlaneBuilder {
 
         private int seats;
@@ -48,21 +64,5 @@ public class Plane {
         public Plane build() {
             return new Plane(this);
         }
-    }
-
-    private Plane(PlaneBuilder builder) {
-        seats = builder.seats;
-        maxSpeed = builder.maxSpeed;
-        weight = builder.weight;
-        length = builder.length;
-        modelName = builder.modelName;
-    }
-
-    public Plane(int seats, int maxSpeed, int weight, int length, String modelName) {
-        this.seats = seats;
-        this.maxSpeed = maxSpeed;
-        this.weight = weight;
-        this.length = length;
-        this.modelName = modelName;
     }
 }
