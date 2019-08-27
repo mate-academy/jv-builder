@@ -48,7 +48,6 @@ public class Plane {
         return weight;
     }
 
-
     public static class PlaneBuilder {
         private String name;
         private String color;
@@ -88,8 +87,5 @@ public class Plane {
         public Plane build() {
             return new Plane(this);
         }
-
     }
 }
-
-
