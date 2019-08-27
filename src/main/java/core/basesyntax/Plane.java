@@ -8,7 +8,7 @@ public final class Plane {
     private int capacity;
     private String airlines;
     private String pilot;
-    private HashSet<String> baggage;
+    private HashSet<String> baggages;
     private HashMap<String, Integer> sits;
 
     private Plane(PlaneBuilder planeBuilder) {
