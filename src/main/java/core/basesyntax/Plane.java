@@ -60,37 +60,31 @@ public class Plane {
 
         public PlaneBuilder setModelName(String modelName) {
             this.modelName = modelName;
-
             return this;
         }
 
         public PlaneBuilder setEmptyWeight(int emptyWeight) {
             this.emptyWeight = emptyWeight;
-
             return this;
         }
 
         public PlaneBuilder setTakeoffWeight(int takeoffWeight) {
             this.takeoffWeight = takeoffWeight;
-
             return this;
         }
 
         public PlaneBuilder setCruisingSpeed(int cruisingSpeed) {
             this.cruisingSpeed = cruisingSpeed;
-
             return this;
         }
 
         public PlaneBuilder setEnginePower(int enginePower) {
             this.enginePower = enginePower;
-
             return this;
         }
 
         public PlaneBuilder setWingspan(int wingspan) {
             this.wingspan = wingspan;
-
             return this;
         }
 
