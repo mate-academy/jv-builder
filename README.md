@@ -1,4 +1,4 @@
-# jv-homework-template
+# jv-builder
 
 Дано класс Plane. Написать класс PlaneBuilder, который реализует паттерн Builder.
 Добавьте не менее пяти полей в класс Plain.
