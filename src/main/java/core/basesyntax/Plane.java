@@ -6,12 +6,12 @@ package core.basesyntax;
  * которые могут потребоваться для реализации паттерна Builder.</p>
  */
 
-public class Plane {
-    private String name;
-    private String model;
-    private int maxSpeed;
-    private double maxHeight;
-    private int maxSeats;
+public final class Plane {
+    private final String name;
+    private final String model;
+    private final int maxSpeed;
+    private final double maxHeight;
+    private final int maxSeats;
 
     private Plane(PlaneBuilder builder) {
         this.name = builder.name;
@@ -50,53 +50,37 @@ public class Plane {
         return maxHeight;
     }
 
-    public class PlaneBuilder {
+    public static class PlaneBuilder {
         private String name;
         private String model;
         private int maxSpeed;
         private double maxHeight;
         private int maxSeats;
 
-        //Getters
-        public double getMaxHeight() {
-            return maxHeight;
-        }
-
-        public int getMaxSeats() {
-            return maxSeats;
-        }
-
-        public int getMaxSpeed() {
-            return maxSpeed;
-        }
-
-        public String getModel() {
-            return model;
-        }
-
-        public String getName() {
-            return name;
-        }
-
         // Setters
-        public void setMaxHeight(double maxHeight) {
+        public PlaneBuilder setMaxHeight(double maxHeight) {
             this.maxHeight = maxHeight;
+            return this;
         }
 
-        public void setMaxSeats(int maxSeats) {
+        public PlaneBuilder setMaxSeats(int maxSeats) {
             this.maxSeats = maxSeats;
+            return this;
         }
 
-        public void setMaxSpeed(int maxSpeed) {
+        public PlaneBuilder setMaxSpeed(int maxSpeed) {
             this.maxSpeed = maxSpeed;
+            return this;
         }
 
-        public void setModel(String model) {
+        public PlaneBuilder setModel(String model) {
             this.model = model;
+            return this;
         }
 
-        public void setName(String name) {
+        public PlaneBuilder setName(String name) {
             this.name = name;
+            return this;
         }
 
         public Plane build() {
