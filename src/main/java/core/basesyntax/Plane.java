@@ -29,7 +29,7 @@ public class Plane {
         this.isBeautiful = planeBuilder.isBeautiful;
     }
 
-    public class PlaneBuilder {
+    public static class PlaneBuilder {
         private String markName;
         private int maxSpeed;
         private int maxFlyRange;
