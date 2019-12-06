@@ -20,6 +20,7 @@ public class Plane {
         this.company = company;
         this.year = year;
     }
+
     private Plane(PlaneBuilder planeBuilder) {
         this.model = model;
         this.numberOfEngines = numberOfEngines;
@@ -36,7 +37,7 @@ public class Plane {
         private String company;
         private int year;
 
-        public PlaneBuilder (String builderName){
+        public PlaneBuilder(String builderName) {
             this.builderName = builderName;
         }
 
