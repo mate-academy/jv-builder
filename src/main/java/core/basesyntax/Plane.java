@@ -21,6 +21,14 @@ public class Plane {
         this.age = age;
     }
 
+    private Plane(PlaneBuilder builder) {
+        this.name = builder.name;
+        this.model = builder.model;
+        this.maxRange = builder.maxRange;
+        this.capacity = builder.capacity;
+        this.age = builder.age;
+    }
+
     public static class PlaneBuilder {
         private String name;
         private String model;
@@ -54,7 +62,7 @@ public class Plane {
         }
 
         public Plane build() {
-            return new Plane(name, model, maxRange, capacity, age);
+            return new Plane(this);
         }
     }
 }
