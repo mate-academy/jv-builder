@@ -22,6 +22,26 @@ public class Plane {
         this.color = color;
     }
 
+    public int getModelNumber() {
+        return modelNumber;
+    }
+
+    public int getPassangerCapacity() {
+        return passangerCapacity;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public double getRealeseYear() {
+        return realeseYear;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
     public static class PlaneBuilder {
         private int modelNumber;
         private int passangerCapacity;
