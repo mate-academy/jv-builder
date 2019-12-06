@@ -20,13 +20,25 @@ public class Plane {
         this.company = company;
         this.year = year;
     }
+    private Plane(PlaneBuilder planeBuilder) {
+        this.model = model;
+        this.numberOfEngines = numberOfEngines;
+        this.maxDistance = maxDistance;
+        this.company = company;
+        this.year = year;
+    }
 
-    public class PlaneBuilder {
+    public static class PlaneBuilder {
+        private String builderName;
         private String model;
         private int numberOfEngines;
         private int maxDistance;
         private String company;
         private int year;
+
+        public PlaneBuilder (String builderName){
+            this.builderName = builderName;
+        }
 
         public PlaneBuilder setModel(String modelToSet) {
             this.model = modelToSet;
@@ -54,7 +66,7 @@ public class Plane {
         }
 
         public Plane build() {
-            return new Plane(model, numberOfEngines, maxDistance, company, year);
+            return new Plane(this);
         }
     }
 }
