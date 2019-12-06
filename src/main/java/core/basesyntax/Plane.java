@@ -7,5 +7,75 @@ package core.basesyntax;
  */
 
 public class Plane {
+    private String model;
+    private String engineType;
+    private int length;
+    private int width;
+    private int height;
 
+    public Plane(String model, String engineType, int length, int width, int height) {
+        this.model = model;
+        this.engineType = engineType;
+        this.length = length;
+        this.width = width;
+        this.height = height;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public String getEngineType() {
+        return engineType;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public static class PlaneBuilder {
+
+        private String model;
+        private String engineType;
+        private int length;
+        private int width;
+        private int height;
+
+        public PlaneBuilder setModel(String model) {
+            this.model = model;
+            return this;
+        }
+
+        public PlaneBuilder setEngineType(String engineType) {
+            this.engineType = engineType;
+            return this;
+        }
+
+        public PlaneBuilder setLength(int length) {
+            this.length = length;
+            return this;
+        }
+
+        public PlaneBuilder setWidth(int width) {
+            this.width = width;
+            return this;
+        }
+
+        public PlaneBuilder setHeight(int height) {
+            this.height = height;
+            return this;
+        }
+
+        public Plane build() {
+            return new Plane(model, engineType, length, width, height);
+        }
+    }
 }
