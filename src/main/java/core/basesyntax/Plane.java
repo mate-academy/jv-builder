@@ -21,7 +21,15 @@ public class Plane {
         this.color = color;
     }
 
-    public class PlaneBuilder {
+    private Plane(PlaneBuilder planeBuilder) {
+        this.length = planeBuilder.length;
+        this.height = planeBuilder.height;
+        this.width = planeBuilder.width;
+        this.maxSpeed = planeBuilder.maxSpeed;
+        this.color = planeBuilder.color;
+    }
+
+    public static class PlaneBuilder {
         private int length;
         private int height;
         private int width;
