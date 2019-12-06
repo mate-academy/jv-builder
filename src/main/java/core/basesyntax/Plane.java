@@ -21,6 +21,14 @@ public class Plane {
         this.height = height;
     }
 
+    private Plane(PlaneBuilder builder) {
+        this.model = builder.model;
+        this.engineType = builder.engineType;
+        this.length = builder.length;
+        this.width = builder.width;
+        this.height = builder.height;
+    }
+
     public String getModel() {
         return model;
     }
@@ -75,7 +83,7 @@ public class Plane {
         }
 
         public Plane build() {
-            return new Plane(model, engineType, length, width, height);
+            return new Plane(this);
         }
     }
 }
