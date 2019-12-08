@@ -13,8 +13,8 @@ public class Plane {
     private double realeseYear;
     private String color;
 
-    public Plane(int modelNumber, int passangerCapacity,
-                 int width, double realeseYear, String color) {
+    public Plane(int modelNumber, int passangerCapacity, int width,
+                 double realeseYear, String color) {
         this.modelNumber = modelNumber;
         this.passangerCapacity = passangerCapacity;
         this.width = width;
@@ -22,24 +22,12 @@ public class Plane {
         this.color = color;
     }
 
-    public int getModelNumber() {
-        return modelNumber;
-    }
-
-    public int getPassangerCapacity() {
-        return passangerCapacity;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public double getRealeseYear() {
-        return realeseYear;
-    }
-
-    public String getColor() {
-        return color;
+    private Plane(PlaneBuilder builder) {
+        this.modelNumber = builder.modelNumber;
+        this.color = builder.color;
+        this.passangerCapacity = builder.passangerCapacity;
+        this.width = builder.width;
+        this.realeseYear = builder.realeseYear;
     }
 
     public static class PlaneBuilder {
@@ -67,6 +55,7 @@ public class Plane {
         public PlaneBuilder setRealeseYear(double realeseYear) {
             this.realeseYear = realeseYear;
             return this;
+
         }
 
         public PlaneBuilder setColor(String color) {
@@ -75,7 +64,7 @@ public class Plane {
         }
 
         public Plane build() {
-            return new Plane(modelNumber, passangerCapacity, width, realeseYear, color);
+            return new Plane(this);
         }
     }
 }
