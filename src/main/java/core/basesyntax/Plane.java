@@ -12,13 +12,15 @@ public class Plane {
     private int width;
     private double maxSpeed;
     private String color;
+    private String name;
 
-    public Plane(int length, int height, int width, double maxSpeed, String color) {
+    public Plane(int length, int height, int width, double maxSpeed, String color, String name) {
         this.length = length;
         this.height = height;
         this.width = width;
         this.maxSpeed = maxSpeed;
         this.color = color;
+        this.name = name;
     }
 
     private Plane(PlaneBuilder planeBuilder) {
@@ -27,6 +29,7 @@ public class Plane {
         this.width = planeBuilder.width;
         this.maxSpeed = planeBuilder.maxSpeed;
         this.color = planeBuilder.color;
+        this.name = planeBuilder.name;
     }
 
     public static class PlaneBuilder {
@@ -35,6 +38,16 @@ public class Plane {
         private int width;
         private double maxSpeed;
         private String color;
+        private String name;
+
+        public PlaneBuilder(String name) {
+            this.name = name;
+        }
+
+        public PlaneBuilder setName(String name) {
+            this.name = name;
+            return this;
+        }
 
         public PlaneBuilder setLength(int length) {
             this.length = length;
@@ -62,7 +75,7 @@ public class Plane {
         }
 
         public Plane build() {
-            return new Plane(length, height, width, maxSpeed, color);
+            return new Plane(this);
         }
     }
 }
