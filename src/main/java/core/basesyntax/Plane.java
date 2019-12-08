@@ -75,11 +75,8 @@ public class Plane {
         }
 
         public Plane build() {
-            return new Plane(this.type = type,
-                    this.model = model,
-                    this.numberOfSeats = numberOfSeats,
-                    this.length = length,
-                    this.height = height);
+
+            return new Plane(type, model, numberOfSeats, length, height);
         }
     }
 }
