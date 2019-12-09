@@ -21,6 +21,14 @@ public class Plane {
         this.color = color;
     }
 
+    private Plane(PlaneBuilder builder) {
+        this.model = builder.model;
+        this.speed = builder.speed;
+        this.weight = builder.weight;
+        this.age = builder.age;
+        this.color = builder.color;
+    }
+
     public static class PlaneBuilder {
         private String model;
         private int speed;
@@ -54,7 +62,7 @@ public class Plane {
         }
 
         public Plane build() {
-            return new Plane(model, speed, weight, age, color);
+            return new Plane(this);
         }
     }
 }
