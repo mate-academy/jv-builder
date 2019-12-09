@@ -41,7 +41,7 @@ public class Plane {
         return height;
     }
 
-    public class PlaneBuilder {
+    public static class PlaneBuilder {
 
         private String type;
         private String model;
