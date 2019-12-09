@@ -26,30 +26,48 @@ public class Plane {
         this.rangeOfflight = rangeOfflight;
     }
 
-    public class PlaneBuilder {
+    private Plane(PlaneBuilder planeBuilder) {
+        this.manufacturer = planeBuilder.manufacturer;
+        this.model  = planeBuilder.model;
+        this.type = planeBuilder.type;
+        this.speed = planeBuilder.speed;
+        this.rangeOfflight = planeBuilder.rangeOfflight;
+    }
 
-        public void setManufacturer(String manufacturer) {
-            Plane.this.manufacturer = manufacturer;
+    public static class PlaneBuilder {
+        private String manufacturer;
+        private String model;
+        private String type;
+        private int speed;
+        private int rangeOfflight;
+
+        public PlaneBuilder setManufacturer(String manufacturer) {
+            this.manufacturer = manufacturer;
+            return this;
         }
 
-        public void setModel(String model) {
-            Plane.this.model = model;
+        public PlaneBuilder setModel(String model) {
+            this.model = model;
+            return this;
         }
 
-        public void setType(String type) {
-            Plane.this.type = type;
+        public PlaneBuilder setType(String type) {
+            this.type = type;
+            return this;
         }
 
-        public void setSpeed(int speed) {
-            Plane.this.speed = speed;
+        public PlaneBuilder setSpeed(int speed) {
+            this.speed = speed;
+            return this;
         }
 
-        public void setrangeOfflight(int rangeOfflight) {
-            Plane.this.rangeOfflight = rangeOfflight;
+        public PlaneBuilder setRangeOfflight(int rangeOfflight) {
+            this.rangeOfflight = rangeOfflight;
+            return this;
         }
 
         public Plane build() {
-            return new Plane(manufacturer, model, type, speed, rangeOfflight);
+            return new Plane(this);
         }
     }
 }
