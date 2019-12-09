@@ -41,6 +41,14 @@ public class Plane {
         return maxHeight;
     }
 
+    private Plane(PlaneBuilder planeBuilder) {
+        this.model = planeBuilder.model;
+        this.color = planeBuilder.color;
+        this.power = planeBuilder.power;
+        this.maxSpeed = planeBuilder.maxSpeed;
+        this.maxHeight = planeBuilder.maxHeight;
+    }
+
     public static class PlaneBuilder {
         private String model;
         private String color;
@@ -74,7 +82,7 @@ public class Plane {
         }
 
         public Plane build() {
-            return new Plane(model, color, power, maxSpeed, maxHeight);
+            return new Plane(this);
         }
     }
 }
