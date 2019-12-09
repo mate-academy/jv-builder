@@ -30,19 +30,13 @@ public class Plane {
     }
 
     public static class PlaneBuilder {
-        private String builderName;
         private String model;
         private int numberOfEngines;
         private int maxDistance;
         private String company;
         private int year;
 
-        public void setBuilderName(String builderName) {
-            this.builderName = builderName;
-        }
-
         public PlaneBuilder(String builderName) {
-            this.builderName = builderName;
         }
 
         public PlaneBuilder setModel(String modelToSet) {
