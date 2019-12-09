@@ -26,6 +26,14 @@ public class Plane {
         this.hasGun = hasGun;
     }
 
+    private Plane(PlaneBuilder planeBuilder) {
+        this.model = planeBuilder.model;
+        this.pilotName = planeBuilder.pilotName;
+        this.color = planeBuilder.color;
+        this.numOfEngines = planeBuilder.numOfEngines;
+        this.hasGun = planeBuilder.hasGun;
+    }
+
     public static class PlaneBuilder {
 
         private String model;
@@ -46,8 +54,9 @@ public class Plane {
             this.hasGun = hasGun;
         }
 
-        public void setModel(String model) {
+        public PlaneBuilder setModel(String model) {
             this.model = model;
+            return this;
         }
 
         public PlaneBuilder setPilotName(String pilotName) {
@@ -71,11 +80,7 @@ public class Plane {
         }
 
         public Plane build() {
-            return new Plane(this.model,
-                    this.pilotName,
-                    this.color,
-                    this.numOfEngines,
-                    this.hasGun);
+            return new Plane(this);
         }
 
     }
