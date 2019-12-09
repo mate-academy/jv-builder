@@ -15,12 +15,11 @@ public class Plane {
     private String identifier;
 
     public Plane(
-        int enginesQuantity,
-        int crewMembers,
-        int rangeOfFlight,
-        double weight,
-        String identifier)
-    {
+            int enginesQuantity,
+            int crewMembers,
+            int rangeOfFlight,
+            double weight,
+            String identifier) {
         this.enginesQuantity = enginesQuantity;
         this.crewMembers = crewMembers;
         this.rangeOfFlight = rangeOfFlight;
