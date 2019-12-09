@@ -8,6 +8,14 @@ package core.basesyntax;
 
 public class Plane {
 
+    /*public static void main(String[] args) {
+        Plane boeing = new Plane.PlaneBuilder("Boeing",
+                "John",
+                "White",
+                4,
+                false).build();
+    }*/
+
     private String model;
     private String pilotName;
     private String color;
