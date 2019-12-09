@@ -13,6 +13,14 @@ public class Plane {
     private int length;
     private int height;
 
+    private Plane(PlaneBuilder planeBuilder) {
+        this.type = planeBuilder.type;
+        this.model = planeBuilder.model;
+        this.numberOfSeats = planeBuilder.numberOfSeats;
+        this.length = planeBuilder.length;
+        this.height = planeBuilder.height;
+    }
+
     public Plane(String type, String model, int numberOfSeats, int length, int height) {
         this.type = type;
         this.model = model;
@@ -41,7 +49,7 @@ public class Plane {
         return height;
     }
 
-    public static class PlaneBuilder {
+    public static  class PlaneBuilder {
 
         private String type;
         private String model;
@@ -76,7 +84,7 @@ public class Plane {
 
         public Plane build() {
 
-            return new Plane(type, model, numberOfSeats, length, height);
+            return new Plane(this);
         }
     }
 }
