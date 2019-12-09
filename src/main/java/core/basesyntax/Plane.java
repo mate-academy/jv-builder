@@ -63,8 +63,7 @@ public class Plane {
         }
 
         public Plane build() {
-            return new Plane(name,model,engineCapacity,passengerCapacity,tankVolume);
+            return new Plane(this);
         }
     }
 }
-
