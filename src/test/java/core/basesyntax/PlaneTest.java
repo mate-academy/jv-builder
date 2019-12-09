@@ -107,4 +107,28 @@ public class PlaneTest {
         Assert.assertEquals("You have a constructor with all fields that exists in the plane",
                 actualParameterCount, expectedParameterCount);
     }
+
+    @Test
+    public void withModel() {
+    }
+
+    @Test
+    public void withWeight() {
+    }
+
+    @Test
+    public void withLength() {
+    }
+
+    @Test
+    public void withYear() {
+    }
+
+    @Test
+    public void withSpeed() {
+    }
+
+    @Test
+    public void build() {
+    }
 }
