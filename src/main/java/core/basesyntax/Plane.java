@@ -51,7 +51,7 @@ public final class Plane {
         return maxSpeed;
     }
 
-    public int age() {
+    public int getAge() {
         return age;
     }
 
