@@ -106,8 +106,9 @@ public class PlaneTest {
         Assert.assertEquals("Your constructor should have one parameter",
                 1, actualParameterCount);
 
-        Class<?> parameterType = constructors.get(0).getParameterTypes()[0];
-        Class<?> planeBuilderClass = Plane.class.getClasses()[0];
-        Assert.assertEquals("Your constructor should have one parameter of PlaneBuilder class", planeBuilderClass, parameterType);
+        Class<?> actualConstructorParameterType = constructors.get(0).getParameterTypes()[0];
+        Class<?> expectedPlaneBuilderClass = Plane.class.getClasses()[0];
+        Assert.assertEquals("Your constructor should have one parameter of PlaneBuilder class",
+                expectedPlaneBuilderClass, actualConstructorParameterType);
     }
 }
