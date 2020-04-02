@@ -22,12 +22,13 @@ public class Plane {
     }
 
     public static void main(String[] args) {
-        PlaneBuilder.create()
+        Plane firstPlane = new Plane.PlaneBuilder()
                 .setName("Endeavor")
                 .setType("Civil")
                 .setMaxSpeed(1200)
                 .setMaxSeats(230)
-                .setMaxCargo(4352.00);
+                .setMaxCargo(4352.00)
+                .build();
     }
 
     public static class PlaneBuilder {
@@ -64,10 +65,6 @@ public class Plane {
 
         public Plane build() {
             return new Plane(this);
-        }
-
-        public static PlaneBuilder create() {
-            return new PlaneBuilder();
         }
     }
 }
