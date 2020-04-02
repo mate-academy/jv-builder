@@ -69,7 +69,7 @@ public class Plane {
         }
 
         public Plane build() {
-            return new Plane(new PlaneBuilder());
+            return new Plane(this);
         }
     }
 }
