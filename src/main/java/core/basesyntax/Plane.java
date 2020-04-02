@@ -14,11 +14,11 @@ public class Plane {
     private int enginesCount;
 
     private Plane(PlaneBuilder builder) {
-        this.model = builder.newPlane.model;
-        this.color = builder.newPlane.color;
-        this.length = builder.newPlane.length;
-        this.wingsWidth = builder.newPlane.wingsWidth;
-        this.enginesCount = builder.newPlane.enginesCount;
+        this.model = builder.model;
+        this.color = builder.color;
+        this.length = builder.length;
+        this.wingsWidth = builder.wingsWidth;
+        this.enginesCount = builder.enginesCount;
     }
 
     public String getModel() {
@@ -42,16 +42,14 @@ public class Plane {
     }
 
     public static class PlaneBuilder {
-        private Plane newPlane;
-        private PlaneBuilder builder;
         private String model;
         private String color;
         private int length;
         private int wingsWidth;
         private int enginesCount;
 
-        public PlaneBuilder() {
-            newPlane = new Plane(builder);
+        public PlaneBuilder(String model) {
+            this.model = model;
         }
 
         public PlaneBuilder setModel(String model) {
@@ -80,7 +78,7 @@ public class Plane {
         }
 
         public Plane build() {
-            return newPlane;
+            return new Plane(this);
         }
     }
 }
