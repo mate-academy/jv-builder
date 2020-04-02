@@ -8,4 +8,71 @@ package core.basesyntax;
 
 public class Plane {
 
+    private String planeName;
+    private int planeLength;
+    private int planeWeight;
+    private int planeCapacity;
+    private int planeYear;
+
+    private Plane(PlaneBuilder planeBuilder) {
+        this.planeName = planeBuilder.planeName;
+    }
+
+    public String getPlaneName() {
+        return planeName;
+    }
+
+    public int getPlaneLength() {
+        return planeLength;
+    }
+
+    public int getPlaneWeight() {
+        return planeWeight;
+    }
+
+    public int getPlaneCapacity() {
+        return planeCapacity;
+    }
+
+    public int getPlaneYear() {
+        return planeYear;
+    }
+
+    public static class PlaneBuilder {
+
+        private String planeName;
+        private int planeLength;
+        private int planeWeight;
+        private int planeCapacity;
+        private int planeYear;
+
+        public PlaneBuilder setPlaneName(String planeName) {
+            this.planeName = planeName;
+            return this;
+        }
+
+        public PlaneBuilder setPlaneLength(int planeLength) {
+            this.planeLength = planeLength;
+            return this;
+        }
+
+        public PlaneBuilder setPlaneWeight(int planeWeight) {
+            this.planeWeight = planeWeight;
+            return this;
+        }
+
+        public PlaneBuilder setPlaneCapacity(int planeCapacity) {
+            this.planeCapacity = planeCapacity;
+            return this;
+        }
+
+        public PlaneBuilder setPlaneYear(int planeYear) {
+            this.planeYear = planeYear;
+            return this;
+        }
+
+        public Plane build() {
+            return new Plane(this);
+        }
+    }
 }
