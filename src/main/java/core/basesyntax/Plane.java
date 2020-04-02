@@ -30,26 +30,6 @@ public class Plane {
                 .setMaxCargo(4352.00);
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public int getMaxSpeed() {
-        return maxSpeed;
-    }
-
-    public int getMaxSeats() {
-        return maxSeats;
-    }
-
-    public double getMaxCargo() {
-        return maxCargo;
-    }
-
     public static class PlaneBuilder {
         private String name;
         private String type;
