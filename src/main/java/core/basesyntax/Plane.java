@@ -77,7 +77,7 @@ public class Plane {
         }
 
         public Plane build() {
-            return new Plane(PlaneBuilder.this);
+            return new Plane(this);
         }
     }
 }
