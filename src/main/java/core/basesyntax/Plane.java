@@ -13,7 +13,7 @@ public class Plane {
     private int power;
     private int maxSpeed;
 
-    public Plane(PlaneBuilder builder) {
+    private Plane(PlaneBuilder builder) {
         this.color = builder.color;
         this.configuration = builder.configuration;
         this.serialNumber = builder.serialNumber;
@@ -28,9 +28,6 @@ public class Plane {
         private String serialNumber;
         private int power;
         private int maxSpeed;
-
-        public PlaneBuilder() {
-        }
 
         public PlaneBuilder setConfiguration(String configuration) {
             this.configuration = configuration;
