@@ -13,7 +13,11 @@ public class Plane {
     private int planeSpeed;
     private PlaneBuilder planeBuilder;
 
-    private Plane(PlaneBuilder planeBuilder) {
+    private Plane(String planeModel, String planeEngineType, int planeSize, int planeSpeed, PlaneBuilder planeBuilder) {
+        this.planeModel = planeModel;
+        this.planeEngineType = planeEngineType;
+        this.planeSpeed = planeSpeed;
+        this.planeBuilder = planeBuilder;
         this.planeBuilder = planeBuilder;
     }
 
