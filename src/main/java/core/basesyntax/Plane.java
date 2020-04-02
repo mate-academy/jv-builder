@@ -13,12 +13,12 @@ public class Plane {
     private int capacity;
     private int maxSpeed;
 
-    private Plane(PlaneBuilder PlaneBuilder) {
-        this.model = PlaneBuilder.model;
-        this.colour = PlaneBuilder.colour;
-        this.power = PlaneBuilder.power;
-        this.capacity = PlaneBuilder.capacity;
-        this.maxSpeed = PlaneBuilder.maxSpeed;
+    private Plane(PlaneBuilder planeBuilder) {
+        this.model = planeBuilder.model;
+        this.colour = planeBuilder.colour;
+        this.power = planeBuilder.power;
+        this.capacity = planeBuilder.capacity;
+        this.maxSpeed = planeBuilder.maxSpeed;
     }
 
     public static class PlaneBuilder {
