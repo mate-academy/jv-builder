@@ -7,5 +7,87 @@ package core.basesyntax;
  */
 
 public class Plane {
+    private String name;
+    private String type;
+    private int maxSpeed;
+    private int maxSeats;
+    private double maxCargo;
 
+    private Plane(PlaneBuilder builder) {
+        this.name = builder.name;
+        this.type = builder.type;
+        this.maxSpeed = builder.maxSpeed;
+        this.maxCargo = builder.maxCargo;
+        this.maxSeats = builder.maxSeats;
+    }
+
+    public static void main(String[] args) {
+        PlaneBuilder.create()
+                .setName("Endeavor")
+                .setType("Civil")
+                .setMaxSpeed(1200)
+                .setMaxSeats(230)
+                .setMaxCargo(4352.00);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public int getMaxSeats() {
+        return maxSeats;
+    }
+
+    public double getMaxCargo() {
+        return maxCargo;
+    }
+
+    public static class PlaneBuilder {
+        private String name;
+        private String type;
+        private int maxSpeed;
+        private double maxCargo;
+        private int maxSeats;
+
+        public PlaneBuilder setName(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public PlaneBuilder setType(String type) {
+            this.type = type;
+            return this;
+        }
+
+        public PlaneBuilder setMaxSpeed(int maxSpeed) {
+            this.maxSpeed = maxSpeed;
+            return this;
+        }
+
+        public PlaneBuilder setMaxSeats(int maxSeats) {
+            this.maxSeats = maxSeats;
+            return this;
+        }
+
+        public PlaneBuilder setMaxCargo(double maxCargo) {
+            this.maxCargo = maxCargo;
+            return this;
+        }
+
+        public Plane build() {
+            return new Plane(this);
+        }
+
+        public static PlaneBuilder create() {
+            return new PlaneBuilder();
+        }
+    }
 }
