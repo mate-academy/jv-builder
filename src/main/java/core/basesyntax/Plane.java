@@ -41,7 +41,7 @@ public class Plane {
         return speed;
     }
 
-    public class PlaneBuilder {
+    public static class PlaneBuilder {
         private String nameOfCompany;
         private String size;
         private String type;
@@ -52,32 +52,27 @@ public class Plane {
         }
 
         public PlaneBuilder setNameOfCompany(String nameOfCompany) {
-            Plane.this.nameOfCompany = nameOfCompany;
-
+            this.nameOfCompany = nameOfCompany;
             return this;
         }
 
         public PlaneBuilder setSize(String size) {
-            Plane.this.size = size;
-
+            this.size = size;
             return this;
         }
 
         public PlaneBuilder setType(String type) {
-            Plane.this.type = type;
-
+            this.type = type;
             return this;
         }
 
         public PlaneBuilder setTimeTravelled(int timeTravelled) {
-            Plane.this.timeTravelled = timeTravelled;
-
+            this.timeTravelled = timeTravelled;
             return this;
         }
 
         public PlaneBuilder setSpeed(int speed) {
-            Plane.this.speed = speed;
-
+            this.speed = speed;
             return this;
         }
 
@@ -87,5 +82,3 @@ public class Plane {
 
     }
 }
-
-
