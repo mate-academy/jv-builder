@@ -14,7 +14,7 @@ public class Plane {
     private int numberOfEngines;
     private int capacity;
 
-    public Plane(PlaneBuilder builder) {
+    private Plane(PlaneBuilder builder) {
         this.type = builder.type;
         this.typeEngine = builder.typeEngine;
         this.range = builder.range;
