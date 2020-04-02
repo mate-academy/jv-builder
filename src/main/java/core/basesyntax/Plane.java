@@ -23,13 +23,13 @@ public class Plane {
 
     @Override
     public String toString() {
-        return "Plane{" +
-                "mark='" + mark + '\'' +
-                ", type='" + type + '\'' +
-                ", power='" + power + '\'' +
-                ", engineType='" + engineType + '\'' +
-                ", numOfEngine=" + numOfEngine +
-                '}';
+        return "Plane{"
+                + "mark='" + mark + '\''
+                + ", type='" + type + '\''
+                + ", power='" + power + '\''
+                + ", engineType='" + engineType + '\''
+                + ", numOfEngine=" + numOfEngine
+                + '}';
     }
 
     public String getMark() {
