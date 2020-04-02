@@ -28,8 +28,6 @@ public class Plane {
         private double maxCargo;
         private int maxSeats;
 
-        private PlaneBuilder() {};
-
         public PlaneBuilder setName(String name) {
             this.name = name;
             return this;
@@ -58,15 +56,5 @@ public class Plane {
         public Plane build() {
             return new Plane(this);
         }
-    }
-
-    public static void main(String[] args) {
-        Plane firstPlane = new Plane.PlaneBuilder()
-                .setName("Endeavor")
-                .setType("Civil")
-                .setMaxSpeed(1200)
-                .setMaxSeats(230)
-                .setMaxCargo(4352.00)
-                .build();
     }
 }
