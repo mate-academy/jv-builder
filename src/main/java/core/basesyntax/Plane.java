@@ -59,9 +59,6 @@ public class Plane {
         private String engineType;
         private int numOfEngine;
 
-        public PlaneBuilder() {
-        }
-
         public PlaneBuilder setMark(String mark) {
             this.mark = mark;
             return this;
