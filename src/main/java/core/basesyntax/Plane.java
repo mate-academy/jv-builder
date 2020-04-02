@@ -48,9 +48,6 @@ public class Plane {
         private int timeTravelled;
         private int speed;
 
-        public PlaneBuilder() {
-        }
-
         public PlaneBuilder setNameOfCompany(String nameOfCompany) {
             this.nameOfCompany = nameOfCompany;
             return this;
@@ -79,6 +76,5 @@ public class Plane {
         public Plane build() {
             return new Plane(this);
         }
-
     }
 }
