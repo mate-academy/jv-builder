@@ -70,7 +70,6 @@ public final class Plane {
         Plane plane = planeBuilder.setPlaneModel("Boeing-747").setNumberOfSeats(298)
                 .setMaxWeight(16000).setMaxHeight(10668).setSpeed(332).build();
         System.out.println(plane);
-
     }
 }
 
