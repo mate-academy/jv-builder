@@ -7,17 +7,27 @@ package core.basesyntax;
  */
 
 public class Plane {
-
     private String brand;
     private String model;
     private int humanCapacity;
     private int maxSpeed;
     private int engineAmount;
 
-    private Plane(PlaneBuilder planeBuilder) {
+    private Plane(PlaneBuilder builder) {
+        this.brand = builder.brand;
+        this.model = builder.model;
+        this.humanCapacity = builder.humanCapacity;
+        this.maxSpeed = builder.maxSpeed;
+        this.engineAmount = builder.engineAmount;
     }
 
     public class PlaneBuilder {
+        private String brand;
+        private String model;
+        private int humanCapacity;
+        private int maxSpeed;
+        private int engineAmount;
+
         public PlaneBuilder setBrand(String brand) {
             Plane.this.brand = brand;
             return this;
@@ -43,8 +53,8 @@ public class Plane {
             return this;
         }
 
-        public PlaneBuilder build() {
-            return PlaneBuilder.this;
+        public Plane build() {
+            return new Plane(this);
         }
 
     }
