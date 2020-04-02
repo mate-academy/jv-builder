@@ -7,51 +7,56 @@ package core.basesyntax;
  */
 
 public class Plane {
-    private int param1;
-    private int param2;
-    private int param3;
-    private int param4;
-    private int param5;
 
-    public Plane(PlaneBuilder planeBuilder) {
+    private String name;
+    private String model;
+    private int age;
+    private int height;
+    private int weight;
 
+    private Plane(PlaneBuilder planeBuilder) {
+        this.name = planeBuilder.name;
+        this.model = planeBuilder.model;
+        this.age = planeBuilder.age;
+        this.height = planeBuilder.height;
+        this.weight = planeBuilder.weight;
     }
 
-    public class PlaneBuilder {
+    public static class PlaneBuilder {
 
-        private int paramParam;
+        private String name;
+        private String model;
+        private int age;
+        private int height;
+        private int weight;
 
-        public PlaneBuilder(int param1) {
-            Plane.this.param1 = param1;
+        public PlaneBuilder setName(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public PlaneBuilder setModel(String surname) {
+            this.model = surname;
+            return this;
+        }
+
+        public PlaneBuilder setAge(int age) {
+            this.age = age;
+            return this;
+        }
+
+        public PlaneBuilder setHeight(int height) {
+            this.height = height;
+            return this;
+        }
+
+        public PlaneBuilder setWeight(int weight) {
+            this.weight = weight;
+            return this;
         }
 
         public Plane build() {
             return new Plane(this);
-        }
-
-        public PlaneBuilder setParam1(int param1) {
-            Plane.this.param1 = param1;
-            return this;
-        }
-
-        public PlaneBuilder setParam2(int param1) {
-            Plane.this.param2 = param2;
-            return this;
-        }
-
-        public PlaneBuilder setParam3(int param1) {
-            Plane.this.param3 = param3;
-            return this;
-        }
-
-        public PlaneBuilder setParam4(int param1) {
-            Plane.this.param4 = param4;
-            return this;
-        }
-
-        public PlaneBuilder setParam5(int param1) {
-            Plane.this.param5 = param5;
-            return this;
         }
     }
 }
