@@ -17,10 +17,6 @@ public class Plane {
     private Plane(PlaneBuilder planeBuilder) {
     }
 
-    public static void main(String[] args) {
-
-    }
-
     public class PlaneBuilder {
         public PlaneBuilder setBrand(String brand) {
             Plane.this.brand = brand;
@@ -50,6 +46,7 @@ public class Plane {
         public PlaneBuilder build() {
             return PlaneBuilder.this;
         }
+
     }
 }
 
