@@ -7,5 +7,54 @@ package core.basesyntax;
  */
 
 public class Plane {
+    private String model;
+    private String colour;
+    private int power;
+    private int capacity;
+    private int maxSpeed;
 
+    private Plane(PlaneBuilder PlaneBuilder) {
+        this.model = PlaneBuilder.model;
+        this.colour = PlaneBuilder.colour;
+        this.power = PlaneBuilder.power;
+        this.capacity = PlaneBuilder.capacity;
+        this.maxSpeed = PlaneBuilder.maxSpeed;
+    }
+
+    public static class PlaneBuilder {
+        private String model;
+        private String colour;
+        private int power;
+        private int capacity;
+        private int maxSpeed;
+
+        public PlaneBuilder setModel(String model) {
+            this.model = model;
+            return this;
+        }
+
+        public PlaneBuilder setColour(String colour) {
+            this.colour = colour;
+            return this;
+        }
+
+        public PlaneBuilder setPower(int power) {
+            this.power = power;
+            return this;
+        }
+
+        public PlaneBuilder setCapacity(int capacity) {
+            this.capacity = capacity;
+            return this;
+        }
+
+        public PlaneBuilder setMaxSpeed(int maxSpeed) {
+            this.maxSpeed = maxSpeed;
+            return this;
+        }
+
+        public Plane build() {
+            return new Plane(this);
+        }
+    }
 }
