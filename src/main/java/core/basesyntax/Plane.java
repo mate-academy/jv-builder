@@ -44,33 +44,38 @@ public class Plane {
     public static class PlaneBuilder {
         private Plane newPlane;
         private PlaneBuilder builder;
+        private String model;
+        private String color;
+        private int length;
+        private int wingsWidth;
+        private int enginesCount;
 
         public PlaneBuilder() {
             newPlane = new Plane(builder);
         }
 
         public PlaneBuilder setModel(String model) {
-            newPlane.model = model;
+            this.model = model;
             return this;
         }
 
         public PlaneBuilder setColor(String color) {
-            newPlane.color = color;
+            this.color = color;
             return this;
         }
 
         public PlaneBuilder setLength(int length) {
-            newPlane.length = length;
+            this.length = length;
             return this;
         }
 
         public PlaneBuilder setWingsWidth(int wingsWidth) {
-            newPlane.wingsWidth = wingsWidth;
+            this.wingsWidth = wingsWidth;
             return this;
         }
 
         public PlaneBuilder setEnginesCount(int enginesCount) {
-            newPlane.enginesCount = enginesCount;
+            this.enginesCount = enginesCount;
             return this;
         }
 
