@@ -13,7 +13,7 @@ public class Plane {
     private final int seatsNumber;
     private final int productionYear;
 
-    public Plane(PlaneBuilder builder) {
+    private Plane(PlaneBuilder builder) {
         type = builder.planeType;
         producer = builder.planeProducer;
         model = builder.planeModel;
