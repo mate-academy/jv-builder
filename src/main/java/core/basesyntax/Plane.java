@@ -28,6 +28,8 @@ public class Plane {
         private double maxCargo;
         private int maxSeats;
 
+        private PlaneBuilder() {};
+
         public PlaneBuilder setName(String name) {
             this.name = name;
             return this;
