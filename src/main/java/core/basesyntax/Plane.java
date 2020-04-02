@@ -64,13 +64,6 @@ public final class Plane {
                 + " seats, " + this.maxWeight + " kg, "
                 + this.maxHeight + " metres, " + this.speed + " km per hour]";
     }
-
-    public static void main(String[] args) {
-        Plane.PlaneBuilder planeBuilder = new Plane.PlaneBuilder();
-        Plane plane = planeBuilder.setPlaneModel("Boeing-747").setNumberOfSeats(298)
-                .setMaxWeight(16000).setMaxHeight(10668).setSpeed(332).build();
-        System.out.println(plane);
-    }
 }
 
 
