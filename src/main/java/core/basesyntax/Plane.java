@@ -7,6 +7,85 @@ package core.basesyntax;
  */
 
 public class Plane {
+    private String nameOfCompany;
+    private String size;
+    private String type;
+    private int timeTravelled;
+    private int speed;
+
+    private Plane(PlaneBuilder builder) {
+        this.nameOfCompany = builder.nameOfCompany;
+        this.size = builder.size;
+        this.type = builder.type;
+        this.timeTravelled = builder.timeTravelled;
+        this.speed = builder.speed;
+    }
+
+    public String getNameOfCompany() {
+        return nameOfCompany;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public int getTimeTravelled() {
+        return timeTravelled;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public class PlaneBuilder {
+        private String nameOfCompany;
+        private String size;
+        private String type;
+        private int timeTravelled;
+        private int speed;
+
+        public PlaneBuilder() {
+        }
+
+        public PlaneBuilder setNameOfCompany(String nameOfCompany) {
+            Plane.this.nameOfCompany = nameOfCompany;
+
+            return this;
+        }
+
+        public PlaneBuilder setSize(String size) {
+            Plane.this.size = size;
+
+            return this;
+        }
+
+        public PlaneBuilder setType(String type) {
+            Plane.this.type = type;
+
+            return this;
+        }
+
+        public PlaneBuilder setTimeTravelled(int timeTravelled) {
+            Plane.this.timeTravelled = timeTravelled;
+
+            return this;
+        }
+
+        public PlaneBuilder setSpeed(int speed) {
+            Plane.this.speed = speed;
+
+            return this;
+        }
+
+        public Plane build() {
+            return new Plane(this);
+        }
+
+    }
 }
 
 
