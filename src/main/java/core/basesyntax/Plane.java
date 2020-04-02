@@ -13,7 +13,7 @@ public class Plane {
     private double maxTakeoffWeight;
     private long fuelCapacity;
 
-    public Plane(PlaneBuilder planeBuilder) {
+    private Plane(PlaneBuilder planeBuilder) {
         this.designedGroup = designedGroup;
         this.crew = crew;
         this.emptyWeight = emptyWeight;
@@ -47,9 +47,6 @@ public class Plane {
         private double emptyWeight;
         private double maxTakeoffWeight;
         private long fuelCapacity;
-
-        public PlaneBuilder(){
-        }
 
         public void setDesignedGroup(String designedGroup) {
             this.designedGroup = designedGroup;
