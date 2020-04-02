@@ -15,7 +15,11 @@ public class Plane {
     private String model;
 
     public Plane(PlaneBuilder builderForPlane) {
+        this.power = builderForPlane.power;
         this.model = builderForPlane.model;
+        this.size = builderForPlane.size;
+        this.color = builderForPlane.color;
+        this.seats = builderForPlane.seats;
     }
 
     public Integer getPower() {
@@ -38,43 +42,45 @@ public class Plane {
         return model;
     }
 
-    public class PlaneBuilder {
+    public static class PlaneBuilder {
         private Integer power;
         private Integer size;
         private String color;
         private Integer seats;
         private String model;
 
-        private PlaneBuilder() {
+        public PlaneBuilder(String model, String color) {
+            this.model = model;
+            this.color = color;
         }
 
         public PlaneBuilder setPower(Integer power) {
-            Plane.this.power = power;
+            this.power = power;
             return this;
         }
 
         public PlaneBuilder setSize(Integer size) {
-            Plane.this.size = size;
+            this.size = size;
             return this;
         }
 
         public PlaneBuilder setColor(String color) {
-            Plane.this.color = color;
+            this.color = color;
             return this;
         }
 
         public PlaneBuilder setSeats(Integer seats) {
-            Plane.this.seats = seats;
+            this.seats = seats;
             return this;
         }
 
         public PlaneBuilder setModel(String model) {
-            Plane.this.model = model;
+            this.model = model;
             return this;
         }
 
         public Plane build() {
-            return Plane.this;
+            return new Plane(this);
         }
 
     }
