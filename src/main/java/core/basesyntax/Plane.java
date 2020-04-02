@@ -28,10 +28,6 @@ public class Plane {
         private int maxSpeed;
         private int noiseLevel;
 
-        public PlaneBuilder() {
-
-        }
-
         public PlaneBuilder setModel(String model) {
             this.model = model;
             return this;
