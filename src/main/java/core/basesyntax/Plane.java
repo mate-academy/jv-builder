@@ -13,7 +13,7 @@ public class Plane {
     private int amountEngine;
     private int maxSpeed;
 
-    public Plane(PlaneBuilder builder) {
+    private Plane(PlaneBuilder builder) {
         this.name = builder.name;
         this.type = builder.type;
         this.lengthOfPlane = builder.lengthOfPlane;
