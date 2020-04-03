@@ -21,13 +21,6 @@ public class Plane {
         this.maxSeats = builder.maxSeats;
     }
 
-    public static void main(String[] args) {
-        PlaneBuilder pb = new PlaneBuilder();
-        pb.setMaxCargo(10);
-        pb.setMaxSeats(23);
-        Plane newPlane = pb.build();
-    }
-
     public static class PlaneBuilder {
         private String name;
         private String type;
