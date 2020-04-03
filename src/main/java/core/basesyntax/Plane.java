@@ -14,7 +14,7 @@ public class Plane {
     private Integer seats;
     private String model;
 
-    public Plane(PlaneBuilder builderForPlane) {
+    private Plane(PlaneBuilder builderForPlane) {
         this.power = builderForPlane.power;
         this.model = builderForPlane.model;
         this.size = builderForPlane.size;
