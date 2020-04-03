@@ -42,7 +42,7 @@ public class Plane {
         return series;
     }
 
-    public class PlaneBuilder {
+    public static class PlaneBuilder {
 
         private String model;
         private String type;
@@ -76,7 +76,7 @@ public class Plane {
         }
 
         public Plane build() {
-            return Plane.this;
+            return new Plane(this);
         }
     }
 }
