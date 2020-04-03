@@ -13,7 +13,7 @@ public class Plane {
     private int capacityFuel;
     private int weight;
 
-    public Plane(PlaneBuilder builder) {
+    private Plane(PlaneBuilder builder) {
         this.name = builder.name;
         this.maxSpeed = builder.maxSpeed;
         this.capacityPassagers = builder.capacityPassagers;
