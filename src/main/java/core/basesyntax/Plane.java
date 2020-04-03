@@ -13,54 +13,57 @@ public class Plane {
     private long price;
     private int age;
 
-    private Plane(PlaneBuilder pb) {
-        pb.build();
+    private Plane(PlaneBuilder planeBuilder) {
+        this.size = planeBuilder.size;
+        this.model = planeBuilder.model;
+        this.number = planeBuilder.number;
+        this.price = planeBuilder.price;
+        this.age = planeBuilder.age;
     }
 
-    public class PlaneBuilder {
+    public static class PlaneBuilder {
+        private int size;
+        private String model;
+        private String number;
+        private long price;
+        private int age;
 
-        private int size1;
-        private String model1;
-        private String number1;
-        private long price1;
-        private int age1;
-
-        private PlaneBuilder() {
+        public PlaneBuilder() {
 
         }
 
         public PlaneBuilder setsize(int size) {
-            this.size1 = size;
+            this.size = size;
 
             return this;
         }
 
         public PlaneBuilder setmodel(String model) {
-            this.model1 = model;
+            this.model = model;
 
             return this;
         }
 
         public PlaneBuilder setnumber(String number) {
-            this.number1 = number;
+            this.number = number;
 
             return this;
         }
 
         public PlaneBuilder setage(int age) {
-            this.age1 = age;
+            this.age = age;
 
             return this;
         }
 
         public PlaneBuilder setprice(long price) {
-            this.price1 = price;
+            this.price = price;
 
             return this;
         }
 
         public Plane build() {
-            return Plane.this;
+            return new Plane(this);
         }
     }
 }
