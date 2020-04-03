@@ -28,9 +28,6 @@ public class Plane {
         private int enginePower;
         private String planeClassification;
 
-        public PlaneBuilder() {
-        }
-
         public PlaneBuilder setPlaneModel(String planeModel) {
             this.planeModel = planeModel;
             return this;
