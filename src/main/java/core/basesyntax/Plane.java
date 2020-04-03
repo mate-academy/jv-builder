@@ -43,7 +43,7 @@ public class Plane {
 
     @Override
     public String toString() {
-        return String.format("Plane{model=%s, wingspan=%f,"
+        return String.format("Plane{modelType=%s, wingspan=%f,"
                         + " length=%f, engine=%s, material=%s}",
                 modelType, wingspan, length, engineType, bodyMaterial);
     }
