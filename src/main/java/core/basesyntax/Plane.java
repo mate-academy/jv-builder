@@ -23,7 +23,6 @@ public class Plane {
     }
 
     public static class PlaneBuilder {
-
         private String brand;
         private String model;
         private int maxSpeed;
