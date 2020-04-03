@@ -11,46 +11,52 @@ public class Plane {
     private String planeEngineType;
     private int planeSize;
     private int planeSpeed;
-    private PlaneBuilder planeBuilder;
+    private String planeColor;
 
     private Plane(PlaneBuilder planeBuilder) {
-        this.planeBuilder = planeBuilder;
+        this.planeModel = planeBuilder.planeModel;
     }
 
     public class PlaneBuilder {
-        public PlaneBuilder setPlaneModel(String planeModel) {
 
-            Plane.this.planeModel = planeModel;
+        private String planeModel;
+        private String planeEngineType;
+        private int planeSize;
+        private int planeSpeed;
+        private String planeColor;
+
+        public PlaneBuilder setPlaneModel(String planeModel) {
+            this.planeModel = planeModel;
 
             return this;
         }
 
         public PlaneBuilder setPlaneEngineType(String planeEngineType) {
-            Plane.this.planeEngineType = planeEngineType;
+            this.planeEngineType = planeEngineType;
 
             return this;
         }
 
         public PlaneBuilder setPlaneSize(int planeSize) {
-            Plane.this.planeSize = planeSize;
+            this.planeSize = planeSize;
 
             return this;
         }
 
         public PlaneBuilder setPlaneSpeed(int planeSpeed) {
-            Plane.this.planeSpeed = planeSpeed;
+            this.planeSpeed = planeSpeed;
 
             return this;
         }
 
-        public PlaneBuilder setPlaneBuilder(PlaneBuilder planeBuilder) {
-            Plane.this.planeBuilder = planeBuilder;
+        public PlaneBuilder setPlaneColor(String planeColor) {
+            this.planeColor = planeColor;
 
             return this;
         }
 
         public Plane build() {
-            return Plane.this;
+            return new Plane(this);
         }
     }
 }
