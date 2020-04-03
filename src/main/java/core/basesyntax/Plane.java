@@ -7,7 +7,6 @@ package core.basesyntax;
  */
 
 public class Plane {
-
     private String brand;
     private String model;
     private int seatsNum;
