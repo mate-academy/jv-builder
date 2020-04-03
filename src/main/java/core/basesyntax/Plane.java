@@ -15,10 +15,12 @@ public class Plane {
 
     private Plane(PlaneBuilder planeBuilder) {
         this.planeModel = planeBuilder.planeModel;
+        this.planeEngineType = planeBuilder.planeEngineType;
+        this.planeSize = planeBuilder.planeSize;
+        this.planeSpeed = planeBuilder.planeSpeed;
     }
 
     public class PlaneBuilder {
-
         private String planeModel;
         private String planeEngineType;
         private int planeSize;
@@ -27,9 +29,6 @@ public class Plane {
 
         public PlaneBuilder setPlaneModel(String planeModel) {
             this.planeModel = planeModel;
-            this.planeEngineType = planeEngineType;
-            this.planeSize = planeSize;
-            this.planeSpeed = planeSpeed;
             return this;
         }
 
