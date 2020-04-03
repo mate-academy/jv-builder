@@ -16,6 +16,10 @@ public class Plane {
 
     private Plane(PlaneBuilder planeBuilder) {
         this.planeName = planeBuilder.planeName;
+        this.planeLength = planeBuilder.planeLength;
+        this.planeWeight = planeBuilder.planeWeight;
+        this.planeCapacity = planeBuilder.planeCapacity;
+        this.planeYear = planeBuilder.planeYear;
     }
 
     public String getPlaneName() {
