@@ -18,6 +18,7 @@ public class Plane {
         this.planeEngineType = planeBuilder.planeEngineType;
         this.planeSize = planeBuilder.planeSize;
         this.planeSpeed = planeBuilder.planeSpeed;
+        this.planeColor = planeBuilder.planeColor;
     }
 
     public class PlaneBuilder {
