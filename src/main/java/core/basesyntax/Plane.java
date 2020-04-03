@@ -29,27 +29,27 @@ public class Plane {
         private int engineAmount;
 
         public PlaneBuilder setBrand(String brand) {
-            Plane.this.brand = brand;
+            this.brand = brand;
             return this;
         }
 
         public PlaneBuilder setModel(String model) {
-            Plane.this.model = model;
+            this.model = model;
             return this;
         }
 
         public PlaneBuilder setHumanCapacity(int humanCapacity) {
-            Plane.this.humanCapacity = humanCapacity;
+            this.humanCapacity = humanCapacity;
             return this;
         }
 
         public PlaneBuilder setMaxSpeed(int maxSpeed) {
-            Plane.this.maxSpeed = maxSpeed;
+            this.maxSpeed = maxSpeed;
             return this;
         }
 
         public PlaneBuilder setEngineAmount(int engineAmount) {
-            Plane.this.engineAmount = engineAmount;
+            this.engineAmount = engineAmount;
             return this;
         }
 
