@@ -17,10 +17,8 @@ public class Plane {
     }
 
     public static class PlaneBuilder {
-        //Required
         private String brand;
         private int model;
-        //Optional
         private int power = 0;
         private String color = null;
         private int wheelsDiameter = 0;
