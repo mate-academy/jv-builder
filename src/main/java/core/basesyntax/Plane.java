@@ -15,7 +15,7 @@ public final class Plane {
     private String speedType;
     private int year;
 
-    public Plane(PlaneBuilder planeBuilder) {
+    private Plane(PlaneBuilder planeBuilder) {
         this.model = planeBuilder.model;
         this.destination = planeBuilder.destination;
         this.weight = planeBuilder.weight;
@@ -54,40 +54,47 @@ public final class Plane {
     }
 
     public static class PlaneBuilder {
+        private int weight;
         private String model;
         private String destination;
-        private int weight;
         private int engineQuantity;
         private int wingsQuantity;
         private String speedType;
         private int year;
 
-        public void setModel(String model) {
+        public PlaneBuilder setModel(String model) {
             this.model = model;
+            return this;
         }
 
-        public void setDestination(String destination) {
+        public PlaneBuilder setDestination(String destination) {
             this.destination = destination;
+            return this;
         }
 
-        public void setWeight(int weight) {
+        public PlaneBuilder setWeight(int weight) {
             this.weight = weight;
+            return this;
         }
 
-        public void setEngineQuantity(int engineQuantity) {
+        public PlaneBuilder setEngineQuantity(int engineQuantity) {
             this.engineQuantity = engineQuantity;
+            return this;
         }
 
-        public void setWingsQuantity(int wingsQuantity) {
+        public PlaneBuilder setWingsQuantity(int wingsQuantity) {
             this.wingsQuantity = wingsQuantity;
+            return this;
         }
 
-        public void setSpeedType(String speedType) {
+        public PlaneBuilder setSpeedType(String speedType) {
             this.speedType = speedType;
+            return this;
         }
 
-        public void setYear(int year) {
+        public PlaneBuilder setYear(int year) {
             this.year = year;
+            return this;
         }
 
         public Plane build() {
