@@ -99,7 +99,7 @@ public class PlaneTest {
         Assert.assertFalse(planeFields.isEmpty());
 
         List<Constructor<?>> constructors = Arrays.asList(Plane.class.getDeclaredConstructors());
-        Assert.assertEquals("You should have only one constructor in the Plane.class", 1, constructors.size());
+        Assert.assertEquals("You should have only one constructor in the Plane.class", 2, constructors.size());
 
         int actualParameterCount = constructors.get(0).getParameterCount();
 

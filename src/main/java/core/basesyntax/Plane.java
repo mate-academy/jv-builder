@@ -19,7 +19,6 @@ public class Plane {
         this.manufacturer = builder.manufacturer;
         this.engineName = builder.engineName;
         this.constructorName = builder.constructorName;
-
     }
 
     public static class PlaneBuilder {
@@ -29,34 +28,34 @@ public class Plane {
         private String engineName;
         private String constructorName;
 
-        public PlaneBuilder setName(String name){
+        public PlaneBuilder setName(String name) {
             this.name = name;
             return this;
         }
 
-        public PlaneBuilder setModel(String model){
+        public PlaneBuilder setModel(String model) {
             this.model = model;
             return this;
         }
 
-        public PlaneBuilder setManufacturer(String manufacturer){
+        public PlaneBuilder setManufacturer(String manufacturer) {
             this.manufacturer = manufacturer;
             return this;
         }
 
-        public PlaneBuilder setEngineName(String engineName){
+        public PlaneBuilder setEngineName(String engineName) {
             this.engineName = engineName;
             return this;
         }
 
-        public PlaneBuilder setConstructorName(String constructorName){
+        public PlaneBuilder setConstructorName(String constructorName) {
             this.constructorName = constructorName;
             return this;
         }
 
-        public Plane build(){
+        public Plane build() {
+
             return new Plane(this);
         }
     }
-
 }
