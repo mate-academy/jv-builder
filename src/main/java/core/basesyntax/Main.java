@@ -3,6 +3,7 @@ package core.basesyntax;
 import org.w3c.dom.ls.LSOutput;
 
 public class Main {
+
     public static void main(String[] args) {
 
         Plane.PlaneBuilder plane = new Plane.PlaneBuilder()
@@ -12,7 +13,5 @@ public class Main {
                 .setIsInAir(false)
                 .setPilotName("Vasia")
                 .build();
-
     }
-
 }
