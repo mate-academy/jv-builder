@@ -7,5 +7,64 @@ package core.basesyntax;
  */
 
 public class Plane {
+    private final String brand;
+    private final String model;
+    private final int passengersCapacity;
+    private final int crewCount;
+    private final int takeOffWeightTon;
 
+    private Plane(PlaneBuilder planeBuilder) {
+        this.brand = planeBuilder.brand;
+        this.model = planeBuilder.model;
+        this.passengersCapacity = planeBuilder.passengersCapacity;
+        this.crewCount = planeBuilder.crewCount;
+        this.takeOffWeightTon = planeBuilder.takeOffWeightTon;
+    }
+
+    @Override
+    public String toString() {
+        return "'" + brand + '\''
+                + ", model='" + model + '\''
+                + ", passengersCapacity=" + passengersCapacity
+                + ", crewCount=" + crewCount
+                + ", takeOffWeightTon=" + takeOffWeightTon
+                + '}';
+    }
+
+    public static class PlaneBuilder {
+        private String brand;
+        private String model;
+        private int passengersCapacity;
+        private int crewCount;
+        private int takeOffWeightTon;
+
+        public PlaneBuilder setBrand(String brand) {
+            this.brand = brand;
+            return this;
+        }
+
+        public PlaneBuilder setModel(String model) {
+            this.model = model;
+            return this;
+        }
+
+        public PlaneBuilder setPassengersCapacity(int passengersCapacity) {
+            this.passengersCapacity = passengersCapacity;
+            return this;
+        }
+
+        public PlaneBuilder setCrewCount(int crewCount) {
+            this.crewCount = crewCount;
+            return this;
+        }
+
+        public PlaneBuilder setTakeOffWeightTon(int takeOffWeightTon) {
+            this.takeOffWeightTon = takeOffWeightTon;
+            return this;
+        }
+
+        public Plane build() {
+            return new Plane(this);
+        }
+    }
 }
