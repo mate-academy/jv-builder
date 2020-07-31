@@ -59,9 +59,6 @@ public class Plane {
         private int numberOfPassenger;
         private boolean isSeaplane;
 
-        public PlaneBuilder() {
-        }
-
         public PlaneBuilder setId(int id) {
             this.id = id;
             return this;
