@@ -32,7 +32,6 @@ public final class Plane {
 
         public PlaneBuilder setModel(String model) {
             this.model = model;
-            ;
             return this;
         }
 
