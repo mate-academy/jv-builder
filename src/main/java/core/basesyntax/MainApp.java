@@ -9,5 +9,8 @@ public class MainApp {
         System.out.println(plane.getWingspan());
         System.out.println(plane.getEmpennageForm());
         System.out.println(plane.getLandingGearType());
+        Plane.PlaneBuilder plane2 = new Plane.PlaneBuilder();
+        plane2.setWingspan(118);
+        System.out.println(plane2.build().getWingspan());
     }
 }

@@ -41,34 +41,34 @@ public class Plane {
         return aircraftEngineClass;
     }
 
-    public static class PlaneBuilder implements Builder {
+    public static class PlaneBuilder {
         private int wingspan;
         private String fuselageType;
         private String empennageForm;
         private String landingGearType;
         private String aircraftEngineClass;
 
-        public Builder setWingspan(int wingspan) {
+        public PlaneBuilder setWingspan(int wingspan) {
             this.wingspan = wingspan;
             return this;
         }
 
-        public Builder setFuselageType(String fuselageType) {
+        public PlaneBuilder setFuselageType(String fuselageType) {
             this.fuselageType = fuselageType;
             return this;
         }
 
-        public Builder setEmpennageForm(String empennageForm) {
+        public PlaneBuilder setEmpennageForm(String empennageForm) {
             this.empennageForm = empennageForm;
             return this;
         }
 
-        public Builder setLandingGearType(String landingGearType) {
+        public PlaneBuilder setLandingGearType(String landingGearType) {
             this.landingGearType = landingGearType;
             return this;
         }
 
-        public Builder setAircraftEngineClass(String aircraftEngineClass) {
+        public PlaneBuilder setAircraftEngineClass(String aircraftEngineClass) {
             this.aircraftEngineClass = aircraftEngineClass;
             return this;
         }
