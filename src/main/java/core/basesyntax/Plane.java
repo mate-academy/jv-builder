@@ -16,7 +16,7 @@ public class Plane {
     private double wingspan;
     private double weight;
 
-    public Plane(PlaneBuilder planeBuilder) {
+    private Plane(PlaneBuilder planeBuilder) {
         this.id = planeBuilder.id;
         this.name = planeBuilder.name;
         this.crewCount = planeBuilder.crewCount;
