@@ -28,15 +28,6 @@ public class Plane {
         private int passengerNumber;
         private int petrolVolume;
 
-        public PlaneBuilder(String name, String color, int weight,
-                            int passengerNumber, int petrolVolume) {
-            this.name = name;
-            this.color = color;
-            this.weight = weight;
-            this.passengerNumber = passengerNumber;
-            this.petrolVolume = petrolVolume;
-        }
-
         public PlaneBuilder setName(String name) {
             this.name = name;
             return this;
