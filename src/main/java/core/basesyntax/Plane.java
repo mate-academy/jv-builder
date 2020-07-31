@@ -13,12 +13,12 @@ public class Plane {
     private int numberOfSeats;
     private boolean turboEngine;
 
-    Plane(PlaneBuilder planeBuilder) {
-        this.brand = planeBuilder.brand;
-        this.model = planeBuilder.model;
-        this.yearOfManufacturing = planeBuilder.yearOfManufacturing;
-        this.numberOfSeats = planeBuilder.numberOfSeats;
-        this.turboEngine = planeBuilder.turboEngine;
+    private Plane(PlaneBuilder planeBuilder) {
+        brand = planeBuilder.brand;
+        model = planeBuilder.model;
+        yearOfManufacturing = planeBuilder.yearOfManufacturing;
+        numberOfSeats = planeBuilder.numberOfSeats;
+        turboEngine = planeBuilder.turboEngine;
     }
 
     public static class PlaneBuilder {
@@ -27,11 +27,6 @@ public class Plane {
         int yearOfManufacturing;
         int numberOfSeats;
         boolean turboEngine;
-
-        public PlaneBuilder(String brand, String model) {
-            this.brand = brand;
-            this.model = model;
-        }
 
         public PlaneBuilder setBrand(String brand) {
             this.brand = brand;
