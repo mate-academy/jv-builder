@@ -14,11 +14,11 @@ public class Plane {
     private String brand;
 
     private Plane(PlaneBuilder planeBuilder) {
-        this.type = planeBuilder.type;
-        this.length = planeBuilder.length;
-        this.weight = planeBuilder.weight;
-        this.speed = planeBuilder.speed;
-        this.brand = planeBuilder.brand;
+        type = planeBuilder.type;
+        length = planeBuilder.length;
+        weight = planeBuilder.weight;
+        speed = planeBuilder.speed;
+        brand = planeBuilder.brand;
     }
 
     public static class PlaneBuilder {
