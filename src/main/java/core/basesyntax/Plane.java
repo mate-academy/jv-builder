@@ -16,7 +16,7 @@ public class Plane {
     private Plane(PlaneBuilder planeBuilder) {
     }
 
-    public class PlaneBuilder {
+    public static class PlaneBuilder {
         private Plane plane;
 
         private PlaneBuilder() {
