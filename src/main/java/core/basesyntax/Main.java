@@ -2,8 +2,7 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        Plane.PlaneBuilder planeBuilder = new Plane.PlaneBuilder();
-        Plane plane = planeBuilder
+        Plane plane = new Plane.PlaneBuilder()
                 .setColor("Grey")
                 .setId(4)
                 .setModel("Airbus A220")

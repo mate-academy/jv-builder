@@ -14,11 +14,11 @@ public class Plane {
     private String color;
 
     private Plane(PlaneBuilder planeBuilder) {
-        this.id = planeBuilder.id;
-        this.weight = planeBuilder.weight;
-        this.speed = planeBuilder.speed;
-        this.model = planeBuilder.model;
-        this.color = planeBuilder.color;
+        id = planeBuilder.id;
+        weight = planeBuilder.weight;
+        speed = planeBuilder.speed;
+        model = planeBuilder.model;
+        color = planeBuilder.color;
     }
 
     public static class PlaneBuilder {
