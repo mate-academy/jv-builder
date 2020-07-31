@@ -9,12 +9,16 @@ package core.basesyntax;
 public class Plane {
     private int maxSpeed;
     private String model;
-    private int weight;
     private String type;
-    private int amountOfPassengers;
+    private int amountOfPassenger;
+    private int weight;
 
-    private Plane(PlaneBuilder builder) {
-        this.model = builder.setModel;
+    private Plane(PlaneBuilder planeBuilder) {
+        this.maxSpeed = planeBuilder.maxSpeed;
+        this.model = planeBuilder.model;
+        this.type = planeBuilder.type;
+        this.amountOfPassenger = planeBuilder.amountOfPassenger;
+        this.weight = planeBuilder.weight;
     }
 
     public int getMaxSpeed() {
@@ -25,52 +29,61 @@ public class Plane {
         return model;
     }
 
-    public int getWeight() {
-        return weight;
-    }
-
     public String getType() {
         return type;
     }
 
-    public int getAmountOfPassengers() {
-        return amountOfPassengers;
+    public int getAmountOfPassenger() {
+        return amountOfPassenger;
     }
 
-    public class PlaneBuilder {
-        public String setModel;
+    public int isSeaplane() {
+        return weight;
+    }
 
-        private PlaneBuilder() {
+    @Override
+    public String toString() {
+        return "Information about plane model " + model
+                + "\n type " + type
+                + "\n max speed '" + maxSpeed
+                + "\n weight  " + weight
+                + "\n maximum amount of passengers are  " + amountOfPassenger;
+    }
 
-        }
+    public static class PlaneBuilder {
+        private int maxSpeed;
+        private String model;
+        private String type;
+        private int amountOfPassenger;
+        private int weight;
 
         public PlaneBuilder setMaxSpeed(int maxSpeed) {
-            Plane.this.maxSpeed = maxSpeed;
+            this.maxSpeed = maxSpeed;
             return this;
         }
 
         public PlaneBuilder setModel(String model) {
-            Plane.this.model = model;
-            return this;
-        }
-
-        public PlaneBuilder setWeight(int weight) {
-            Plane.this.weight = weight;
+            this.model = model;
             return this;
         }
 
         public PlaneBuilder setType(String type) {
-            Plane.this.type = type;
+            this.type = type;
             return this;
         }
 
-        public PlaneBuilder setAmountOfPassengers(int amountOfPassengers) {
-            Plane.this.amountOfPassengers = amountOfPassengers;
+        public PlaneBuilder setAmountOfPassenger(int amountOfPassenger) {
+            this.amountOfPassenger = amountOfPassenger;
+            return this;
+        }
+
+        public PlaneBuilder setWeight(int weight) {
+            this.weight = weight;
             return this;
         }
 
         public Plane build() {
-            return Plane.this;
+            return new Plane(this);
         }
     }
 }
