@@ -16,9 +16,64 @@ public final class Plane {
     private boolean brokeDownBefore;
 
     private Plane(PlaneBuilder builder) {
+        this.model = builder.model;
+        this.pilotName = builder.pilotName;
+        this.yearBuilt = builder.yearBuilt;
+        this.maxNumberOfPassengers = builder.maxNumberOfPassengers;
+        this.brokeDownBefore = builder.brokeDownBefore;
     }
 
-    public class PlaneBuilder {
+    public static class PlaneBuilder {
+        private String model;
+        private String pilotName;
+        private int yearBuilt;
+        private int maxNumberOfPassengers;
+        private boolean brokeDownBefore;
+
+        public PlaneBuilder setModel(String model) {
+            this.model = model;
+            ;
+            return this;
+        }
+
+        public PlaneBuilder setPilotName(String pilotName) {
+            this.pilotName = pilotName;
+            return this;
+        }
+
+        public PlaneBuilder setYearBuilt(int yearBuilt) {
+            this.yearBuilt = yearBuilt;
+            return this;
+        }
+
+        public PlaneBuilder setMaxNumberOfPassengers(int maxNumberOfPassengers) {
+            this.maxNumberOfPassengers = maxNumberOfPassengers;
+            return this;
+        }
+
+        public PlaneBuilder setBrokeDownBefore(boolean brokeDownBefore) {
+            this.brokeDownBefore = brokeDownBefore;
+            return this;
+        }
+
+        public Plane build() {
+            return new Plane(this);
+        }
+    }
+}
+
+
+/*public class Plane {
+    private String model;
+    private String pilotName;
+    private int yearBuilt;
+    private int maxNumberOfPassengers;
+    private boolean brokeDownBefore;
+
+    private Plane(PlaneBuilder builder) {
+    }
+
+    class PlaneBuilder {
 
         private PlaneBuilder() {
         }
@@ -53,3 +108,4 @@ public final class Plane {
         }
     }
 }
+*/
