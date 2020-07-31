@@ -7,5 +7,74 @@ package core.basesyntax;
  */
 
 public class Plane {
+    private int wingspan;
+    private String fuselageType;
+    private String empennageForm;
+    private String landingGearType;
+    private String aircraftEngineClass;
 
+    private Plane(PlaneBuilder builder) {
+        wingspan = builder.wingspan;
+        fuselageType = builder.fuselageType;
+        empennageForm = builder.empennageForm;
+        landingGearType = builder.landingGearType;
+        aircraftEngineClass = builder.aircraftEngineClass;
+    }
+
+    public int getWingspan() {
+        return wingspan;
+    }
+
+    public String getFuselageType() {
+        return fuselageType;
+    }
+
+    public String getEmpennageForm() {
+        return empennageForm;
+    }
+
+    public String getLandingGearType() {
+        return landingGearType;
+    }
+
+    public String getAircraftEngineClass() {
+        return aircraftEngineClass;
+    }
+
+    public static class PlaneBuilder implements Builder {
+        private int wingspan;
+        private String fuselageType;
+        private String empennageForm;
+        private String landingGearType;
+        private String aircraftEngineClass;
+
+        public Builder setWingspan(int wingspan) {
+            this.wingspan = wingspan;
+            return this;
+        }
+
+        public Builder setFuselageType(String fuselageType) {
+            this.fuselageType = fuselageType;
+            return this;
+        }
+
+        public Builder setEmpennageForm(String empennageForm) {
+            this.empennageForm = empennageForm;
+            return this;
+        }
+
+        public Builder setLandingGearType(String landingGearType) {
+            this.landingGearType = landingGearType;
+            return this;
+        }
+
+        public Builder setAircraftEngineClass(String aircraftEngineClass) {
+            this.aircraftEngineClass = aircraftEngineClass;
+            return this;
+        }
+
+        public Plane build() {
+            return new Plane(this);
+        }
+    }
 }
