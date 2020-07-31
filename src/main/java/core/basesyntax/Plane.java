@@ -19,7 +19,6 @@ public class Plane {
         this.manufacturer = builder.manufacturer;
         this.engineName = builder.engineName;
         this.constructorName = builder.constructorName;
-
     }
 
     public static class PlaneBuilder {
@@ -58,5 +57,4 @@ public class Plane {
             return new Plane(this);
         }
     }
-
 }
