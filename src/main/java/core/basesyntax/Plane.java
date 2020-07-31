@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 /**
- * <p>Дано класс Plane. Написать класс Builder, который реализует паттерн Builder.
+ * <p>Дано класс Plane. Написать класс PlaneBuilder, который реализует паттерн PlaneBuilder.
  * Добавьте не менее пяти полей в класс Plain. Внести все необходимые изминения в класс Plane
- * которые могут потребоваться для реализации паттерна Builder.</p>
+ * которые могут потребоваться для реализации паттерна PlaneBuilder.</p>
  */
 
 public class Plane {
@@ -13,7 +13,7 @@ public class Plane {
     private String whichAirlines;
     private int code;
 
-    private Plane(Builder builder) {
+    private Plane(PlaneBuilder planeBuilder) {
     }
 
     public String getPlaneType() {
@@ -44,34 +44,34 @@ public class Plane {
                 + ", code=" + code + "}";
     }
 
-    public static class Builder {
+    public static class PlaneBuilder {
         private Plane plane;
 
-        public Builder() {
+        public PlaneBuilder() {
             plane = new Plane(this);
         }
 
-        public Builder setPlaneType(String planeType) {
+        public PlaneBuilder setPlaneType(String planeType) {
             plane.planeType = planeType;
             return this;
         }
 
-        public Builder setNumberOfPassengers(int numberOfPassengers) {
+        public PlaneBuilder setNumberOfPassengers(int numberOfPassengers) {
             plane.numberOfPassengers = numberOfPassengers;
             return this;
         }
 
-        public Builder setYearOfProduction(String yearOfProduction) {
+        public PlaneBuilder setYearOfProduction(String yearOfProduction) {
             plane.yearOfProduction = yearOfProduction;
             return this;
         }
 
-        public Builder setWhichAirlines(String whichAirlines) {
+        public PlaneBuilder setWhichAirlines(String whichAirlines) {
             plane.whichAirlines = whichAirlines;
             return this;
         }
 
-        public Builder setCode(int code) {
+        public PlaneBuilder setCode(int code) {
             plane.code = code;
             return this;
         }
