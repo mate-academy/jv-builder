@@ -14,8 +14,12 @@ public class Plane {
     private int numberOfPassengers;
     private String manufacturer;
 
-    public Plane(PlaneBuilder builder) {
-
+    public Plane(PlaneBuilder planeBuilder) {
+        this.name = planeBuilder.name;
+        this.maxSpeed = planeBuilder.maxSpeed;
+        this.maxHeight = planeBuilder.maxHeight;
+        this.numberOfPassengers = planeBuilder.numberOfPassengers;
+        this.manufacturer = planeBuilder.manufacturer;
     }
 
     public static class PlaneBuilder {
@@ -26,33 +30,29 @@ public class Plane {
         private int numberOfPassengers;
         private String manufacturer;
 
-        public PlaneBuilder(String name, int maxSpeed, int maxHeight,
-                            int numberOfPassengers, String manufacturer) {
+        public PlaneBuilder setName(String name) {
             this.name = name;
+            return this;
+        }
+
+        public PlaneBuilder setMaxSpeed(int maxSpeed) {
             this.maxSpeed = maxSpeed;
+            return this;
+        }
+
+        public PlaneBuilder setMaxHeight(int maxHeight) {
             this.maxHeight = maxHeight;
+            return this;
+        }
+
+        public PlaneBuilder setNumberOfPassengers(int numberOfPassengers) {
             this.numberOfPassengers = numberOfPassengers;
+            return this;
+        }
+
+        public PlaneBuilder setManufacturer(String manufacturer) {
             this.manufacturer = manufacturer;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public void setMaxSpeed(int maxSpeed) {
-            this.maxSpeed = maxSpeed;
-        }
-
-        public void setMaxHeight(int maxHeight) {
-            this.maxHeight = maxHeight;
-        }
-
-        public void setNumberOfPassengers(int numberOfPassengers) {
-            this.numberOfPassengers = numberOfPassengers;
-        }
-
-        public void setManufacturer(String manufacturer) {
-            this.manufacturer = manufacturer;
+            return this;
         }
 
         public Plane build() {
