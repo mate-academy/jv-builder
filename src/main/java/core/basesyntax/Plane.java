@@ -48,9 +48,6 @@ public class Plane {
         private String pilotName;
         private int gasCapacity;
 
-        public PlaneBuilder() {
-        }
-
         public PlaneBuilder setPlaneID(int planeID) {
             this.planeID = planeID;
             return this;
