@@ -7,7 +7,6 @@ package core.basesyntax;
  */
 
 public class Plane {
-
     private String mark;
     private String model;
     private double speed;
@@ -23,7 +22,6 @@ public class Plane {
     }
 
     public static class PlaneBuilder {
-
         private String mark;
         private String model;
         private double speed;
