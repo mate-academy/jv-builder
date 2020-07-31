@@ -14,31 +14,31 @@ public class Plane {
     private String companyOwner;
 
     public Plane(PlaneBuilder builder) {
-        this.model = builder.model;
-        this.typeBySize = builder.typeBySize;
-        this.typeByLanding = builder.typeByLanding;
-        this.typeByPurpose = builder.typeByPurpose;
-        this.companyOwner = builder.companyOwner;
+        model = builder.model;
+        typeBySize = builder.typeBySize;
+        typeByLanding = builder.typeByLanding;
+        typeByPurpose = builder.typeByPurpose;
+        companyOwner = builder.companyOwner;
     }
 
     public String getModel() {
-        return this.model;
+        return model;
     }
 
     public String getTypeBySize() {
-        return this.typeBySize;
+        return typeBySize;
     }
 
     public String getTypeByLanding() {
-        return this.typeByLanding;
+        return typeByLanding;
     }
 
     public String getTypeByPurpose() {
-        return this.typeByPurpose;
+        return typeByPurpose;
     }
 
     public String getCompanyOwner() {
-        return this.companyOwner;
+        return companyOwner;
     }
 
     public static class PlaneBuilder {
