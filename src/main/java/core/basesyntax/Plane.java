@@ -14,7 +14,7 @@ public class Plane {
     private int gasCapacity;
 
     private Plane(PlaneBuilder builder) {
-        this.planeName = builder.setPlaneName;
+        this.planeName = builder.planeName;
     }
 
     public int getPlaneID() {
@@ -37,46 +37,50 @@ public class Plane {
         return gasCapacity;
     }
 
-    public class PlaneBuilder {
-        public String setPlaneName;
+    public static class PlaneBuilder {
+        private int planeID;
+        private String planeName;
+        private boolean isInAir;
+        private String pilotName;
+        private int gasCapacity;
 
         private PlaneBuilder() {
 
         }
 
         public PlaneBuilder setPlaneID(int planeID) {
-            Plane.this.planeID = planeID;
+            this.planeID = planeID;
 
             return this;
         }
 
         public PlaneBuilder setPlaneName(String planeName) {
-            Plane.this.planeName = planeName;
+            this.planeName = planeName;
 
             return this;
         }
 
         public PlaneBuilder setIsInAir(boolean isInAir) {
-            Plane.this.isInAir = isInAir;
+            this.isInAir = isInAir;
 
             return this;
         }
 
         public PlaneBuilder setPilotName(String pilotName) {
-            Plane.this.pilotName = pilotName;
+            this.pilotName = pilotName;
 
             return this;
         }
 
         public PlaneBuilder setGasCapacity(int gasCapacity) {
-            Plane.this.gasCapacity = gasCapacity;
+            this.gasCapacity = gasCapacity;
 
             return this;
         }
 
-        public Plane build() {
+        public PlaneBuilder build() {
 
-            return Plane.this;
+            return this;
         }
     }
 }
