@@ -7,5 +7,102 @@ package core.basesyntax;
  */
 
 public class Plane {
+    private final String name;
+    private final int seats;
+    private final int wheels;
+    private final int wings;
+    private final int engines;
+    private final int windows;
 
+    public Plane(PlaneBuilder planeBuilder) {
+        this.name = planeBuilder.name;
+        this.seats = planeBuilder.seats;
+        this.wheels = planeBuilder.wheels;
+        this.wings = planeBuilder.wings;
+        this.engines = planeBuilder.engines;
+        this.windows = planeBuilder.windows;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getSeats() {
+        return seats;
+    }
+
+    public int getWheels() {
+        return wheels;
+    }
+
+    public int getWings() {
+        return wings;
+    }
+
+    public int getEngines() {
+        return engines;
+    }
+
+    public int getWindows() {
+        return windows;
+    }
+
+    public static class PlaneBuilder {
+        private String name;
+        private int seats;
+        private int wheels;
+        private int wings;
+        private int engines;
+        private int windows;
+
+        public PlaneBuilder(String name) {
+            this.name = name;
+        }
+
+        public PlaneBuilder setName(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public PlaneBuilder setSeats(int seats) {
+            this.seats = seats;
+            return this;
+        }
+
+        public PlaneBuilder setWheels(int wheels) {
+            this.wheels = wheels;
+            return this;
+        }
+
+        public PlaneBuilder setWings(int wings) {
+            this.wings = wings;
+            return this;
+        }
+
+        public PlaneBuilder setEngines(int engines) {
+            this.engines = engines;
+            return this;
+        }
+
+        public PlaneBuilder setWindows(int wind) {
+            this.windows = windows;
+            return this;
+        }
+
+        public Plane build() {
+            return new Plane(this);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Plane{"
+                + "name='" + name + '\''
+                + ", seats=" + seats
+                + ", wheels=" + wheels
+                + ", wings=" + wings
+                + ", engines=" + engines
+                + ", windows=" + windows
+                + '}';
+    }
 }
