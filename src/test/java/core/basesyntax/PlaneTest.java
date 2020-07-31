@@ -31,12 +31,12 @@ public class PlaneTest {
     @Test
     public void checkThatBuilderClassIsPresent() {
         List<Class> planeInnerClasses = Arrays.asList(Plane.class.getClasses());
-        Assert.assertFalse("PlaneBuilder class should be present as inner class", planeInnerClasses.isEmpty());
+        Assert.assertFalse("Builder class should be present as inner class", planeInnerClasses.isEmpty());
         Optional<Class> planeBuilderClass = planeInnerClasses.stream()
                 .filter(Objects::nonNull)
-                .filter(c -> c.getSimpleName().equals("PlaneBuilder"))
+                .filter(c -> c.getSimpleName().equals("Builder"))
                 .findFirst();
-        Assert.assertTrue("PlaneBuilder class should be present", planeBuilderClass.isPresent());
+        Assert.assertTrue("Builder class should be present", planeBuilderClass.isPresent());
 
         try {
             planeBuilderClass.get().getMethod("build");
@@ -63,9 +63,9 @@ public class PlaneTest {
         List<Class> planeInnerClasses = Arrays.asList(Plane.class.getClasses());
         Optional<Class> planeBuilderClass = planeInnerClasses.stream()
                 .filter(Objects::nonNull)
-                .filter(c -> c.getSimpleName().equals("PlaneBuilder"))
+                .filter(c -> c.getSimpleName().equals("Builder"))
                 .findFirst();
-        Assert.assertTrue("PlaneBuilder class should be present", planeBuilderClass.isPresent());
+        Assert.assertTrue("Builder class should be present", planeBuilderClass.isPresent());
 
 
         List<Method> builderMethods = Arrays.asList(planeBuilderClass.get().getMethods());
@@ -108,7 +108,7 @@ public class PlaneTest {
 
         Class<?> actualConstructorParameterType = constructors.get(0).getParameterTypes()[0];
         Class<?> expectedPlaneBuilderClass = Plane.class.getClasses()[0];
-        Assert.assertEquals("Your constructor should have one parameter of PlaneBuilder class",
+        Assert.assertEquals("Your constructor should have one parameter of Builder class",
                 expectedPlaneBuilderClass, actualConstructorParameterType);
     }
 }
