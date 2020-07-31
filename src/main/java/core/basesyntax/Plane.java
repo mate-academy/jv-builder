@@ -1,29 +1,29 @@
 package core.basesyntax;
 
 public class Plane {
-    private String geography;
+    private String model;
     private String color;
-    private int area;
+    private int power;
     private int height;
-    private boolean isInhabited;
+    private boolean isNew;
 
     private Plane(PlaneBuilder builder) {
-        this.geography = builder.geography;
+        this.model = builder.model;
         this.color = builder.color;
-        this.area = builder.area;
+        this.power = builder.power;
         this.height = builder.height;
-        this.isInhabited = builder.isInhabited;
+        this.isNew = builder.isNew;
     }
 
     public class PlaneBuilder {
-        private String geography;
+        private String model;
         private String color;
-        private int area;
+        private int power;
         private int height;
-        private boolean isInhabited;
+        private boolean isNew;
 
-        public PlaneBuilder setGeography(String geography) {
-            this.geography = geography;
+        public PlaneBuilder setModel(String model) {
+            this.model = model;
             return this;
         }
 
@@ -32,8 +32,8 @@ public class Plane {
             return this;
         }
 
-        public PlaneBuilder setArea(int area) {
-            this.area = area;
+        public PlaneBuilder setPower(int power) {
+            this.power = power;
             return this;
         }
 
@@ -42,8 +42,8 @@ public class Plane {
             return this;
         }
 
-        public PlaneBuilder setisInhabited(boolean isInhabited) {
-            this.isInhabited = isInhabited;
+        public PlaneBuilder setisNew(boolean isNew) {
+            this.isNew = isNew;
             return this;
         }
 
