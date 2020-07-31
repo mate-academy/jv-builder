@@ -17,26 +17,6 @@ public class Plane {
         this.modelName = plainBuilder.modelName;
     }
 
-    public String getModelName() {
-        return modelName;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public Double getPlaneLength() {
-        return planeLength;
-    }
-
-    public String getCountryOfProducing() {
-        return countryOfProducing;
-    }
-
-    public boolean isNewestModel() {
-        return isNewestModel;
-    }
-
     public static class PlaneBuilder {
         private String modelName;
         private String type;
