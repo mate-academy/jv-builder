@@ -14,11 +14,11 @@ public class Plane {
     private final int takeOffWeightTon;
 
     private Plane(PlaneBuilder planeBuilder) {
-        this.brand = planeBuilder.brand;
-        this.model = planeBuilder.model;
-        this.passengersCapacity = planeBuilder.passengersCapacity;
-        this.crewCount = planeBuilder.crewCount;
-        this.takeOffWeightTon = planeBuilder.takeOffWeightTon;
+        brand = planeBuilder.brand;
+        model = planeBuilder.model;
+        passengersCapacity = planeBuilder.passengersCapacity;
+        crewCount = planeBuilder.crewCount;
+        takeOffWeightTon = planeBuilder.takeOffWeightTon;
     }
 
     @Override
