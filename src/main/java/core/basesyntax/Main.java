@@ -9,8 +9,6 @@ public class Main {
                 .setPower(1000)
                 .setWingspan(60)
                 .build();
-
-
     }
 
 }
