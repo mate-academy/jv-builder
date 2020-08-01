@@ -28,7 +28,7 @@ public class Plane {
                 + getWeight() + ", teilNumber= "
                 + getTailNumber() + ", idNumber= "
                 + getIdNumber() + ", wheels= "
-                + getWheels() + ";";
+                + getWheels() + "}";
     }
 
     public String getName() {
