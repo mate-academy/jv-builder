@@ -7,7 +7,6 @@ package core.basesyntax;
  */
 
 public class Plane {
-
     private String name;
     private String type;
     private String color;
@@ -43,7 +42,6 @@ public class Plane {
     }
 
     public static class PlaneBuilder {
-
         private String name;
         private String type;
         private String color;
