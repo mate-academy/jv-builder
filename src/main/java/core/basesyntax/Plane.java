@@ -15,6 +15,10 @@ public class Plane {
 
     private Plane(PlaneBuilder plainBuilder) {
         this.modelName = plainBuilder.modelName;
+        this.type = plainBuilder.type;
+        this.planeLength = plainBuilder.planeLength;
+        this.countryOfProducing = plainBuilder.countryOfProducing;
+        this.isNewestModel = plainBuilder.isNewestModel;
     }
 
     public static class PlaneBuilder {
@@ -23,10 +27,6 @@ public class Plane {
         private Double planeLength;
         private String countryOfProducing;
         private boolean isNewestModel;
-
-        private PlaneBuilder(String modelName) {
-            this.modelName = modelName;
-        }
 
         public PlaneBuilder setModelName(String modelName) {
             this.modelName = modelName;
