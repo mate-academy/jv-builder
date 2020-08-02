@@ -22,7 +22,6 @@ public class Plane {
     }
 
     public static class PlaneBuilder {
-
         private String model;
         private String color;
         private String type;
