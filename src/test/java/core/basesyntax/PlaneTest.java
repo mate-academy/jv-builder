@@ -7,11 +7,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 public class PlaneTest {
     @Test
@@ -58,7 +54,7 @@ public class PlaneTest {
 
     @Test
     public void checkThatAllFieldsFromPlaneExistsInBuilderAsSetters() {
-        List<Field> planeFields = Arrays.asList(Plane.class.getDeclaredFields());
+        Field[] planeFields = Plane.class.getDeclaredFields();
 
         List<Class> planeInnerClasses = Arrays.asList(Plane.class.getClasses());
         Optional<Class> planeBuilderClass = planeInnerClasses.stream()
