@@ -14,6 +14,11 @@ public class Plane {
     private int passengerCapacity;
 
     public Plane(PlaneBuilder planeBuilder) {
+        this.model = planeBuilder.model;
+        this.color = planeBuilder.color;
+        this.weight = planeBuilder.weight;
+        this.maxSpeed = planeBuilder.maxSpeed;
+        this.passengerCapacity = planeBuilder.passengerCapacity;
     }
 
     public String getModel() {
@@ -36,9 +41,7 @@ public class Plane {
         return this.passengerCapacity;
     }
 
-    public class PlaneBuilder {
-        private Plane plane;
-
+    public static class PlaneBuilder {
         private String model;
         private String color;
         private int weight;
@@ -74,7 +77,7 @@ public class Plane {
         }
 
         public Plane build() {
-            return Plane.this;
+            return new Plane(this);
         }
     }
 }
