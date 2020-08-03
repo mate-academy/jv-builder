@@ -4,7 +4,7 @@ Given class Plane. Design class PlaneBuilder, that will implement pattern Builde
 Plane should have at least 5 fields.
 Add all necessary changes that are required in order to implement "Builder".
 P.S.
-In tests we expect Builder implementation where class Plane has private constructor, which takes builder object as input.
+In tests we expect Builder implementation, where class Plane has private constructor, which takes builder object as input.
 Class Builder is inner static with method "build" where private constructor of Plane is called.
 
 Before sending your solution run tests in PlaneTest class and execute in main method your code:
