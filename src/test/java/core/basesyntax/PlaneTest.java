@@ -41,7 +41,7 @@ public class PlaneTest {
         try {
             planeBuilderClass.get().getMethod("build");
         } catch (NoSuchMethodException e) {
-            Assert.fail("PlaneBuilder class should contain method 'build'");
+            Assert.fail("Builder class should contain method 'build'");
         }
     }
 
