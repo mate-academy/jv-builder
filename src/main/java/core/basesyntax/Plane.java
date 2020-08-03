@@ -22,11 +22,11 @@ public class Plane {
     }
 
     public static class PlaneBuilder {
-        String brand;
-        String model;
-        int yearOfManufacturing;
-        int numberOfSeats;
-        boolean turboEngine;
+        private String brand;
+        private String model;
+        private int yearOfManufacturing;
+        private int numberOfSeats;
+        private boolean turboEngine;
 
         public PlaneBuilder setBrand(String brand) {
             this.brand = brand;
