@@ -28,27 +28,27 @@ public class Plane {
         private int weight;
         private String brand;
 
-        public PlaneBuilder setModel() {
+        public PlaneBuilder setModel(String model) {
             this.model = model;
             return this;
         }
 
-        public PlaneBuilder setColor() {
+        public PlaneBuilder setColor(String color) {
             this.color = color;
             return this;
         }
 
-        public PlaneBuilder setSpeed() {
+        public PlaneBuilder setSpeed(int speed) {
             this.speed = speed;
             return this;
         }
 
-        public PlaneBuilder setWeight() {
+        public PlaneBuilder setWeight(int weight) {
             this.weight = weight;
             return this;
         }
 
-        public PlaneBuilder setBrand() {
+        public PlaneBuilder setBrand(String brand) {
             this.brand = brand;
             return this;
         }
