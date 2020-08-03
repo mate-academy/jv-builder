@@ -14,6 +14,11 @@ public class Plane {
     private int code;
 
     private Plane(PlaneBuilder planeBuilder) {
+        this.planeType = planeBuilder.planeType;
+        this.numberOfPassengers = planeBuilder.numberOfPassengers;
+        this.yearOfProduction = planeBuilder.yearOfProduction;
+        this.whichAirlines = planeBuilder.whichAirlines;
+        this.code = planeBuilder.code;
     }
 
     public String getPlaneType() {
@@ -45,39 +50,39 @@ public class Plane {
     }
 
     public static class PlaneBuilder {
-        private Plane plane;
-
-        public PlaneBuilder() {
-            plane = new Plane(this);
-        }
+        private String planeType;
+        private int numberOfPassengers;
+        private String yearOfProduction;
+        private String whichAirlines;
+        private int code;
 
         public PlaneBuilder setPlaneType(String planeType) {
-            plane.planeType = planeType;
+            this.planeType = planeType;
             return this;
         }
 
         public PlaneBuilder setNumberOfPassengers(int numberOfPassengers) {
-            plane.numberOfPassengers = numberOfPassengers;
+            this.numberOfPassengers = numberOfPassengers;
             return this;
         }
 
         public PlaneBuilder setYearOfProduction(String yearOfProduction) {
-            plane.yearOfProduction = yearOfProduction;
+            this.yearOfProduction = yearOfProduction;
             return this;
         }
 
         public PlaneBuilder setWhichAirlines(String whichAirlines) {
-            plane.whichAirlines = whichAirlines;
+            this.whichAirlines = whichAirlines;
             return this;
         }
 
         public PlaneBuilder setCode(int code) {
-            plane.code = code;
+            this.code = code;
             return this;
         }
 
         public Plane build() {
-            return plane;
+            return new Plane(this);
         }
     }
 }
