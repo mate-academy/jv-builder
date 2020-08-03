@@ -13,7 +13,7 @@ public class Plane {
     private double power;
     private double speed;
 
-    public Plane(PlaneBuilder planeBuilder) {
+    private Plane(PlaneBuilder planeBuilder) {
         this.name = planeBuilder.name;
         this.type = planeBuilder.type;
         this.color = planeBuilder.color;
