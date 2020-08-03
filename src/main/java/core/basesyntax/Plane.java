@@ -6,7 +6,7 @@ package core.basesyntax;
  * которые могут потребоваться для реализации паттерна Builder.</p>
  */
 
-public final class Plane {
+public class Plane {
     private double length;
     private double maximumSpeed;
     private String brand;
