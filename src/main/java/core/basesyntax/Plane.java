@@ -13,12 +13,7 @@ public class Plane {
     private int buildYear;
     private String color;
 
-    private Plane(PlaneBuilder builder) {
-        this.model = builder.model;
-        this.countOfSeats = builder.countOfSeats;
-        this.price = builder.price;
-        this.buildYear = builder.buildYear;
-        this.color = builder.color;
+    public Plane(PlaneBuilder builder) {
     }
 
     public String getModel() {
@@ -48,8 +43,7 @@ public class Plane {
         private int buildYear;
         private String color;
 
-        public PlaneBuilder(String model) {
-            this.model = model;
+        public PlaneBuilder() {
         }
 
         public PlaneBuilder setModel(String model) {
