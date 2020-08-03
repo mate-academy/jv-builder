@@ -13,7 +13,12 @@ public class Plane {
     private int power;
     private int wingspan;
 
-    public Plane(PlaneBuilder planeBuilder) {
+    private Plane(PlaneBuilder planeBuilder) {
+        this.name = planeBuilder.name;
+        this.capacity = planeBuilder.capacity;
+        this.flightRange = planeBuilder.flightRange;
+        this.power = planeBuilder.power;
+        this.wingspan = planeBuilder.wingspan;
     }
 
     public static class PlaneBuilder {
