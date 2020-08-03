@@ -6,19 +6,19 @@ package core.basesyntax;
  * которые могут потребоваться для реализации паттерна Builder.</p>
  */
 
-public final class Plane {
+public class Plane {
     private String name;
     private String model;
     private String color;
     private int speed;
     private int weight;
 
-    private Plane(PlaneBuilder builder) {
-        this.name = builder.name;
-        this.model = builder.model;
-        this.color = builder.color;
-        this.speed = builder.speed;
-        this.weight = builder.weight;
+    public Plane(PlaneBuilder builder) {
+        name = builder.name;
+        model = builder.model;
+        color = builder.color;
+        speed = builder.speed;
+        weight = builder.weight;
     }
 
     @Override
@@ -54,8 +54,9 @@ public final class Plane {
         private int speed;
         private int weight;
 
-        public PlaneBuilder(String name) {
+        public PlaneBuilder setName(String name) {
             this.name = name;
+            return this;
         }
 
         public PlaneBuilder setModel(String model) {
@@ -76,10 +77,6 @@ public final class Plane {
         public PlaneBuilder setWeight(int weight) {
             this.weight = weight;
             return this;
-        }
-
-        public void setName(String name) {
-            this.name = name;
         }
 
         public Plane build() {
