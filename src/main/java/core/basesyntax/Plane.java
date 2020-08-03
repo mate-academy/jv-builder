@@ -54,7 +54,6 @@ public class Plane {
         }
 
         public Plane build() {
-
             return new Plane(this);
         }
     }
