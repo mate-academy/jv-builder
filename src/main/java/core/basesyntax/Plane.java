@@ -13,7 +13,7 @@ public class Plane {
     private int maxSpeed;
     private int passengerCapacity;
 
-    public Plane(PlaneBuilder planeBuilder) {
+    private Plane(PlaneBuilder planeBuilder) {
         this.model = planeBuilder.model;
         this.color = planeBuilder.color;
         this.weight = planeBuilder.weight;
@@ -47,9 +47,6 @@ public class Plane {
         private int weight;
         private int maxSpeed;
         private int passengerCapacity;
-
-        public PlaneBuilder() {
-        }
 
         public PlaneBuilder setModel(String model) {
             this.model = model;
