@@ -55,10 +55,6 @@ public class Plane {
         private int engines;
         private int windows;
 
-        public PlaneBuilder(String name) {
-            this.name = name;
-        }
-
         public PlaneBuilder setName(String name) {
             this.name = name;
             return this;
