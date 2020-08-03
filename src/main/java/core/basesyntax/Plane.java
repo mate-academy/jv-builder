@@ -59,33 +59,33 @@ public class Plane {
             this.id = id;
         }
 
+        public PlaneBuilder setId(long id) {
+            this.id = id;
+            return this;
+        }
+
         public PlaneBuilder setAmountOfEngines(int amountOfEngines) {
             this.amountOfEngines = amountOfEngines;
-
             return this;
         }
 
         public PlaneBuilder setName(String name) {
             this.name = name;
-
             return this;
         }
 
         public PlaneBuilder setTakeoffWeight(int takeoffWeight) {
             this.takeoffWeight = takeoffWeight;
-
             return this;
         }
 
         public PlaneBuilder setSpeed(int speed) {
             this.speed = speed;
-
             return this;
         }
 
         public PlaneBuilder setLandingType(String landingType) {
             this.landingType = landingType;
-
             return this;
         }
 
