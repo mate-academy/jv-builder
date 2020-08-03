@@ -1,11 +1,11 @@
 package core.basesyntax;
 
 public class Plane {
-    private final String name;
-    private final String type;
-    private final int maxSpeed;
-    private final int passengerCapacity;
-    private final int rangeOfFlight;
+    private String name;
+    private String type;
+    private int maxSpeed;
+    private int passengerCapacity;
+    private int rangeOfFlight;
 
     private Plane(PlaneBuilder builder) {
         this.name = builder.name;
