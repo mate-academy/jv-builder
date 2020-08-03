@@ -14,12 +14,11 @@ public class Plane {
     private int yearOfManufacturing;
 
     private Plane(PlaneBuilder builder) {
-        this.manufacturer = builder.manufacturer;
-        this.model = builder.model;
-        this.boardNumber = builder.boardNumber;
-        this.passengerCapacity = builder.passengerCapacity;
-        this.yearOfManufacturing = builder.yearOfManufacturing;
-
+        manufacturer = builder.manufacturer;
+        model = builder.model;
+        boardNumber = builder.boardNumber;
+        passengerCapacity = builder.passengerCapacity;
+        yearOfManufacturing = builder.yearOfManufacturing;
     }
 
     public String getManufacturer() {
@@ -51,31 +50,26 @@ public class Plane {
 
         public PlaneBuilder setManufacturer(String manufacturer) {
             this.manufacturer = manufacturer;
-
             return this;
         }
 
         public PlaneBuilder setModel(String model) {
             this.model = model;
-
             return this;
         }
 
         public PlaneBuilder setBoardNumber(int boardNumber) {
             this.boardNumber = boardNumber;
-
             return this;
         }
 
         public PlaneBuilder setPassengerCapacity(int passengerCapacity) {
             this.passengerCapacity = passengerCapacity;
-
             return this;
         }
 
         public PlaneBuilder setYearOfManufacturing(int yearOfManufacturing) {
             this.yearOfManufacturing = yearOfManufacturing;
-
             return this;
         }
 
