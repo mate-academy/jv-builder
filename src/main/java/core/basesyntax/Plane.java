@@ -13,7 +13,7 @@ public class Plane {
     private String pilotName;
     private int gasCapacity;
 
-    public Plane(PlaneBuilder planeBuilder) {
+    private Plane(PlaneBuilder planeBuilder) {
         this.planeID = planeBuilder.planeID;
         this.planeName = planeBuilder.planeName;
         this.isInAir = planeBuilder.isInAir;
