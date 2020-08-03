@@ -12,15 +12,15 @@ public class Plane {
     private String name;
     private int takeoffWeight;
     private int speed;
-    private String landingType = new String("land");
+    private String landingType = "land";
 
     private Plane(PlaneBuilder planeBuilder) {
-        this.id = planeBuilder.id;
-        this.amountOfEngines = planeBuilder.amountOfEngines;
-        this.name = planeBuilder.name;
-        this.takeoffWeight = planeBuilder.takeoffWeight;
-        this.speed = planeBuilder.speed;
-        this.landingType = planeBuilder.landingType;
+        id = planeBuilder.id;
+        amountOfEngines = planeBuilder.amountOfEngines;
+        name = planeBuilder.name;
+        takeoffWeight = planeBuilder.takeoffWeight;
+        speed = planeBuilder.speed;
+        landingType = planeBuilder.landingType;
     }
 
     public long getId() {
@@ -57,12 +57,6 @@ public class Plane {
 
         public PlaneBuilder(long id) {
             this.id = id;
-        }
-
-        public PlaneBuilder setId(long id) {
-            this.id = id;
-
-            return this;
         }
 
         public PlaneBuilder setAmountOfEngines(int amountOfEngines) {
