@@ -15,48 +15,60 @@ public class Plane {
     private boolean swimAbility;
     private int pilotsNumber;
 
-    private Plane(PlaneBuilder planeBuilder) {
-
+    private Plane(PlaneBuilder builder) {
+        this.model = builder.model;
+        this.swimAbility = builder.swimAbility;
+        this.pilotsNumber = builder.pilotsNumber;
+        this.passengerSeats = builder.passengerSeats;
+        this.wingsLength = builder.wingsLength;
+        this.wingsNumber = builder.wingsNumber;
     }
 
     public class PlaneBuilder {
 
-        private PlaneBuilder() {
+        private String model;
+        private int wingsNumber;
+        private double wingsLength;
+        private int passengerSeats;
+        private boolean swimAbility;
+        private int pilotsNumber;
+
+        public PlaneBuilder() {
 
         }
 
         public PlaneBuilder setModel(String model) {
-            Plane.this.model = model;
+            this.model = model;
             return this;
         }
 
         public PlaneBuilder setWingsNumber(int wingsNumber) {
-            Plane.this.wingsNumber = wingsNumber;
+            this.wingsNumber = wingsNumber;
             return this;
         }
 
         public PlaneBuilder setWingsLength(double wingsLength) {
-            Plane.this.wingsLength = wingsLength;
+            this.wingsLength = wingsLength;
             return this;
         }
 
         public PlaneBuilder setPassengerSeats(int passengerSeats) {
-            Plane.this.passengerSeats = passengerSeats;
+            this.passengerSeats = passengerSeats;
             return this;
         }
 
         public PlaneBuilder setSwimAbility(boolean swimAbility) {
-            Plane.this.swimAbility = swimAbility;
+            this.swimAbility = swimAbility;
             return this;
         }
 
         public PlaneBuilder setPilotsNumber(int pilotsNumber) {
-            Plane.this.pilotsNumber = pilotsNumber;
+            this.pilotsNumber = pilotsNumber;
             return this;
         }
 
         public Plane build() {
-            return Plane.this;
+            return new Plane(this);
         }
     }
 }
