@@ -48,7 +48,6 @@ public class Plane {
     }
 
     public static class PlaneBuilder {
-
         private String model;
         private int crew;
         private int capacity;
