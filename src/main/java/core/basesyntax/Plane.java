@@ -7,20 +7,20 @@ package core.basesyntax;
  */
 
 public class Plane {
-    private final String name;
-    private final int seats;
-    private final int wheels;
-    private final int wings;
-    private final int engines;
-    private final int windows;
+    private String name;
+    private int seats;
+    private int wheels;
+    private int wings;
+    private int engines;
+    private int windows;
 
     public Plane(PlaneBuilder planeBuilder) {
-        this.name = planeBuilder.name;
-        this.seats = planeBuilder.seats;
-        this.wheels = planeBuilder.wheels;
-        this.wings = planeBuilder.wings;
-        this.engines = planeBuilder.engines;
-        this.windows = planeBuilder.windows;
+        name = planeBuilder.name;
+        seats = planeBuilder.seats;
+        wheels = planeBuilder.wheels;
+        wings = planeBuilder.wings;
+        engines = planeBuilder.engines;
+        windows = planeBuilder.windows;
     }
 
     public String getName() {
