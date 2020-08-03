@@ -14,11 +14,11 @@ public class Plane {
     private String brand;
 
     private Plane(PlaneBuilder builder) {
-        this.model = builder.model;
-        this.color = builder.color;
-        this.speed = builder.speed;
-        this.weight = builder.weight;
-        this.brand = builder.brand;
+        model = builder.model;
+        color = builder.color;
+        speed = builder.speed;
+        weight = builder.weight;
+        brand = builder.brand;
     }
 
     public static class PlaneBuilder {
@@ -28,27 +28,27 @@ public class Plane {
         private int weight;
         private String brand;
 
-        public PlaneBuilder setModel(String model) {
+        public PlaneBuilder setModel() {
             this.model = model;
             return this;
         }
 
-        public PlaneBuilder setColor(String color) {
+        public PlaneBuilder setColor() {
             this.color = color;
             return this;
         }
 
-        public PlaneBuilder setSpeed(int speed) {
+        public PlaneBuilder setSpeed() {
             this.speed = speed;
             return this;
         }
 
-        public PlaneBuilder setWeight(int weight) {
+        public PlaneBuilder setWeight() {
             this.weight = weight;
             return this;
         }
 
-        public PlaneBuilder setBrand(String brand) {
+        public PlaneBuilder setBrand() {
             this.brand = brand;
             return this;
         }
@@ -57,6 +57,5 @@ public class Plane {
             return new Plane(this);
         }
     }
-
 }
 
