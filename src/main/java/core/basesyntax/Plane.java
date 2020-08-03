@@ -13,7 +13,7 @@ public class Plane {
     private String typeByPurpose;
     private String companyOwner;
 
-    public Plane(PlaneBuilder builder) {
+    private Plane(PlaneBuilder builder) {
         model = builder.model;
         typeBySize = builder.typeBySize;
         typeByLanding = builder.typeByLanding;
@@ -43,11 +43,11 @@ public class Plane {
 
     public static class PlaneBuilder {
 
-        public String model;
-        public String typeBySize;
-        public String typeByLanding;
-        public String typeByPurpose;
-        public String companyOwner;
+        private String model;
+        private String typeBySize;
+        private String typeByLanding;
+        private String typeByPurpose;
+        private String companyOwner;
 
         public PlaneBuilder setModel(String model) {
             this.model = model;
