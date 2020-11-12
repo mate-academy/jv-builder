@@ -11,3 +11,5 @@ Class Builder is inner static with method "build" where private constructor of P
 Before sending your solution run tests in PlaneTest class and execute in main method your code:
 Initialize all Plane object's fields through builder and print result to console, if 
 all fields are initialized - good job, now you can submit your task.
+
+#### [Try to avoid these common mistakes, while solving task](https://mate-academy.github.io/jv-program-common-mistakes/java-core/builder-file/builder.html)
