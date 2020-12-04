@@ -80,7 +80,7 @@ public class Plane {
 
         public Plane build() {
             if (speed < 0 || countOfPassengers < 0) {
-                throw new RuntimeException("Value equal or less than 0");
+                throw new RuntimeException("Value is less than 0");
             }
             return new Plane(this);
         }
