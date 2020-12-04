@@ -9,5 +9,6 @@ public class BuilderTestApp {
                 .setColor("White")
                 .setAmountWindows(20)
                 .build();
+        System.out.println(concretePlane);
     }
 }
