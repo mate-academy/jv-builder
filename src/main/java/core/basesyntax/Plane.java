@@ -7,6 +7,14 @@ public class Plane {
     private int speed;
     private int countOfPassengers;
 
+    private Plane(PlaneBuilder planeBuilder) {
+        this.model = planeBuilder.model;
+        this.color = planeBuilder.color;
+        this.yearIssue = planeBuilder.yearIssue;
+        this.speed = planeBuilder.speed;
+        this.countOfPassengers = planeBuilder.countOfPassengers;
+    }
+
     public String getModel() {
         return model;
     }
@@ -29,21 +37,13 @@ public class Plane {
 
     @Override
     public String toString() {
-        return "Plane{" +
-                "model='" + model + '\'' +
-                ", color='" + color + '\'' +
-                ", yearIssue=" + yearIssue +
-                ", speed=" + speed +
-                ", countOfPassengers=" + countOfPassengers +
-                '}';
-    }
-
-    private Plane(PlaneBuilder planeBuilder) {
-        this.model = planeBuilder.model;
-        this.color = planeBuilder.color;
-        this.yearIssue = planeBuilder.yearIssue;
-        this.speed = planeBuilder.speed;
-        this.countOfPassengers = planeBuilder.countOfPassengers;
+        return "Plane{"
+                + "model='" + model + '\''
+                + ", color='" + color + '\''
+                + ", yearIssue=" + yearIssue
+                + ", speed=" + speed
+                + ", countOfPassengers=" + countOfPassengers
+                + '}';
     }
 
     public static class PlaneBuilder {
