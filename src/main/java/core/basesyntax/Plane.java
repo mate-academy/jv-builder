@@ -37,8 +37,8 @@ public class Plane {
 
     public String getInformation() {
         return String.format("Engine type: %s, plane type: %s, engine power: %.2f kgf,"
-                        + " max speed: %.2f km/h, max height: %.2f ft. "
-                , engineType, planeType, enginePower, maxSpeed, maxHeight);
+                        + " max speed: %.2f km/h, max height: %.2f ft. ",
+                engineType, planeType, enginePower, maxSpeed, maxHeight);
     }
 
     public static class PlaneBuilder {
@@ -85,7 +85,5 @@ public class Plane {
         public Plane build() {
             return new Plane(this);
         }
-
-
     }
 }
