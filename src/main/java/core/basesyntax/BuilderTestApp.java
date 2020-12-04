@@ -1,7 +1,9 @@
 package core.basesyntax;
 
 public class BuilderTestApp {
-  public static void main(String[] args) {
-      // Remove this comment and test your Builder implementation here...
-  }
+
+    public static void main(String[] args) {
+        Plane boeing = new Plane.PlaneBuilder().setColor("pink").build();
+    }
 }
+
