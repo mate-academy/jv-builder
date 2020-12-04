@@ -17,13 +17,17 @@ public class Plane {
 
     @Override
     public String toString() {
-        return "Plane{" +
-                "model='" + model + '\'' +
-                ", capacity='" + capacity + '\'' +
-                ", type='" + type + '\'' +
-                ", year=" + year +
-                ", range=" + range +
-                '}';
+        return "Plane{"
+                + "model='" + model + '\''
+                + ", capacity='" + capacity
+                + '\''
+                + ", type='"
+                + type + '\''
+                + ", year="
+                + year
+                + ", range="
+                + range
+                + '}';
     }
 
     public static class PlaneBuilder {
@@ -58,7 +62,7 @@ public class Plane {
             return this;
         }
 
-        public Plane build () {
+        public Plane build() {
             return new Plane(this);
         }
     }
