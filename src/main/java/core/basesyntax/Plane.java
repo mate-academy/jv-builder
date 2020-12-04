@@ -15,14 +15,12 @@ public class Plane {
         this.maxSpeed = builder.maxSpeed;
     }
 
-
-    public static class PlaneBuilder{
+    public static class PlaneBuilder {
         private String model;
         private int height;
         private int weight;
         private int maxSpeed;
         private int maxHeight;
-
 
         public PlaneBuilder setModel(String model) {
             this.model = model;
@@ -48,19 +46,20 @@ public class Plane {
             this.maxHeight = maxHeight;
             return this;
         }
-        public Plane build(){
+
+        public Plane build() {
             return new Plane(this);
         }
     }
 
     @Override
     public String toString() {
-        return "Plane{" +
-                "model='" + model + '\'' +
-                ", height=" + height +
-                ", weight=" + weight +
-                ", maxSpeed=" + maxSpeed +
-                ", maxHeight=" + maxHeight +
-                '}';
+        return "Plane{"
+                + "model='" + model + '\''
+                + ", height=" + height
+                + ", weight=" + weight
+                + ", maxSpeed=" + maxSpeed
+                + ", maxHeight=" + maxHeight
+                + '}';
     }
 }
