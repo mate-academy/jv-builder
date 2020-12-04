@@ -17,12 +17,12 @@ public class Plane {
 
     @Override
     public String toString() {
-        return "Plane " +
-                "type: " + type +
-                ", model: " + model +
-                ", color: " + color +
-                ", year: " + year +
-                ", amountWindows: " + amountWindows;
+        return "Plane "
+                + "type: " + type
+                + ", model: " + model
+                + ", color: " + color
+                + ", year: " + year
+                + ", amountWindows: " + amountWindows;
     }
 
     public static class PlaneBuilder {
