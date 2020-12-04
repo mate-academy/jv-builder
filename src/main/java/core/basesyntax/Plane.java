@@ -1,58 +1,58 @@
 package core.basesyntax;
 
 public class Plane {
-    private String planeName;
-    private String planeModel;
-    private String planeColor;
-    private int planeSpeed;
-    private int planeCapacity;
+    private String name;
+    private String model;
+    private String color;
+    private int speed;
+    private int capacity;
 
     private Plane(PlaneBuilder planeBuilder) {
-        this.planeName = planeBuilder.planeName;
-        this.planeModel = planeBuilder.planeModel;
-        this.planeColor = planeBuilder.planeColor;
-        this.planeSpeed = planeBuilder.planeSpeed;
-        this.planeCapacity = planeBuilder.planeCapacity;
+        this.name = planeBuilder.name;
+        this.model = planeBuilder.model;
+        this.color = planeBuilder.color;
+        this.speed = planeBuilder.speed;
+        this.capacity = planeBuilder.capacity;
     }
 
     @Override
     public String toString() {
         return "PlaneBuilder{"
-                + "planeName='" + planeName + '\'' + ", planeModel='"
-                + planeModel + '\'' + ", planeColor='" + planeColor
-                + '\'' + ", planeSpeed=" + planeSpeed + ", planeCapacity="
-                + planeCapacity + '}';
+                + "name='" + name + '\'' + ", model='"
+                + model + '\'' + ", color='" + color
+                + '\'' + ", speed=" + speed + ", capacity="
+                + capacity + '}';
     }
 
     public static class PlaneBuilder {
-        private String planeName;
-        private String planeModel;
-        private String planeColor;
-        private int planeSpeed;
-        private int planeCapacity;
+        private String name;
+        private String model;
+        private String color;
+        private int speed;
+        private int capacity;
 
-        public PlaneBuilder setPlaneName(String planeName) {
-            this.planeName = planeName;
+        public PlaneBuilder setName(String name) {
+            this.name = name;
             return this;
         }
 
-        public PlaneBuilder setPlaneModel(String planeModel) {
-            this.planeModel = planeModel;
+        public PlaneBuilder setModel(String model) {
+            this.model = model;
             return this;
         }
 
-        public PlaneBuilder setPlaneColor(String planeColor) {
-            this.planeColor = planeColor;
+        public PlaneBuilder setColor(String color) {
+            this.color = color;
             return this;
         }
 
-        public PlaneBuilder setPlaneSpeed(int planeSpeed) {
-            this.planeSpeed = planeSpeed;
+        public PlaneBuilder setSpeed(int speed) {
+            this.speed = speed;
             return this;
         }
 
-        public PlaneBuilder setPlaneCapacity(int planeCapacity) {
-            this.planeCapacity = planeCapacity;
+        public PlaneBuilder setCapacity(int capacity) {
+            this.capacity = capacity;
             return this;
         }
 
