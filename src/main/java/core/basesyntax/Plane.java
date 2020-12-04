@@ -37,6 +37,12 @@ public class Plane {
         private boolean airframe;
         private boolean wings;
 
+        public PlaneBuilder(boolean propeller, boolean airframe, boolean wings) {
+            this.wings = wings;
+            this.propeller = propeller;
+            this.airframe = airframe;
+        }
+
         public PlaneBuilder setModel(String model) {
             this.model = model;
             return this;

@@ -2,14 +2,16 @@ package core.basesyntax;
 
 public class BuilderTestApp {
     public static void main(String[] args) {
-        Plane redPlane = new Plane.PlaneBuilder()
+        Plane plane = new Plane.PlaneBuilder(true, true, true)
                 .setModel("passenger's")
                 .setMaxSpeed(1000)
                 .setColor("white")
-                .setWings(true)
-                .setAirframe(true)
-                .setPropeller(true)
                 .build();
-        System.out.println(redPlane.toString());
+        System.out.println(plane.toString());
+
+        Plane plane1 = new Plane.PlaneBuilder(false, true, true)
+                .setColor("green")
+                .build();
+        System.out.println(plane1.toString());
     }
 }
