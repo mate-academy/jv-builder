@@ -18,18 +18,11 @@ public class Plane {
     @Override
     public String toString() {
         return "Plane{"
-                + "model='"
-                + model
-                + '\''
-                + ", color='"
-                + color
-                + '\''
-                + ", flightRange="
-                + flightRange
-                + ", maxSpeed="
-                + maxSpeed
-                + ", passengerCapacity="
-                + passengerCapacity
+                + "model='" + model + '\''
+                + ", color='" + color + '\''
+                + ", flightRange=" + flightRange
+                + ", maxSpeed=" + maxSpeed
+                + ", passengerCapacity=" + passengerCapacity
                 + '}';
     }
 
