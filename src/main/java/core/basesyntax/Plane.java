@@ -48,7 +48,7 @@ public class Plane {
             return this;
         }
 
-        public PlaneBuilder setAirliner(boolean airliner) {
+        public PlaneBuilder setIsAirliner(boolean airliner) {
             this.isAirliner = airliner;
             return this;
         }
