@@ -10,7 +10,7 @@ public class Plane {
     private int celling;
     private int year;
 
-    private Plane(PlaneBuilder builder) {
+    public Plane(PlaneBuilder builder) {
         this.airPlaneType = builder.airPlaneType;
         this.name = builder.name;
         this.color = builder.color;
