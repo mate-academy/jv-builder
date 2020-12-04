@@ -17,7 +17,7 @@ public class Plane {
 
     @Override
     public String toString() {
-        return "Builder{"
+        return "Plane{"
                 + "model='" + model + '\''
                 + ", color='" + color + '\''
                 + ", year=" + year
