@@ -17,13 +17,12 @@ public class Plane {
 
     @Override
     public String toString() {
-        return "Plane{" +
-                "name='" + name + '\'' +
-                ", model='" + model + '\'' +
-                ", yearBuild=" + yearBuild +
-                ", engineHorsePower=" + engineHorsePower +
-                ", passengersCapacity=" + passengersCapacity +
-                '}';
+        return "Plane{" + "name='" + name + '\''
+                + ", model='" + model + '\''
+                + ", yearBuild=" + yearBuild
+                + ", engineHorsePower=" + engineHorsePower
+                + ", passengersCapacity=" + passengersCapacity
+                + '}';
     }
 
     public static class PlaneBuilder {
