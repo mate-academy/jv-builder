@@ -15,7 +15,7 @@ public class Plane {
         this.numberOfPassengers = builder.numberOfPassengers;
     }
 
-    public String toString(){
+    public String toString() {
         return new StringBuilder("Plane model: ").append(name).append(", release year: ")
                 .append(year).append(", number of engines: ").append(numberOfEngines)
                 .append(", flying range (in km): ").append(range).append(", number of passengers: ")
