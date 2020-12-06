@@ -8,7 +8,6 @@ public class BuilderTestApp {
                 .setColor("white")
                 .build();
         System.out.println(plane.toString());
-
         Plane plane1 = new Plane.PlaneBuilder(false, true, true)
                 .setColor("green")
                 .build();
