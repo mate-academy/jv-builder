@@ -19,14 +19,13 @@ public class Plane {
 
     @Override
     public String toString() {
-        return "Plane{" +
-                "model='" + model + '\'' +
-                ", color='" + color + '\'' +
-                ", size=" + size +
-                ", doors=" + doors +
-                ", sits=" + sits +
-                ", isCargo=" + isCargo +
-                '}';
+        return "Plane{"
+                + "model='" + model + '\''
+                + ", color='" + color + '\''
+                + ", size=" + size
+                + ", doors=" + doors
+                + ", sits=" + sits
+                + ", isCargo=" + isCargo + '}';
     }
 
     public static class Builder {
