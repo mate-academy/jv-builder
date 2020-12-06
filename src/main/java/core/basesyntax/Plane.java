@@ -58,17 +58,17 @@ public class Plane {
             return this;
         }
 
-        public PlaneBuilder setPropeller(boolean hasPropeller) {
+        public PlaneBuilder setHasPropeller(boolean hasPropeller) {
             this.hasPropeller = hasPropeller;
             return this;
         }
 
-        public PlaneBuilder setAirframe(boolean hasAirframe) {
+        public PlaneBuilder setHasAirframe(boolean hasAirframe) {
             this.hasAirframe = hasAirframe;
             return this;
         }
 
-        public PlaneBuilder setWings(boolean hasWings) {
+        public PlaneBuilder setHasWings(boolean hasWings) {
             this.hasWings = hasWings;
             return this;
         }
