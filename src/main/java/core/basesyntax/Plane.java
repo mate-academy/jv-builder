@@ -4,17 +4,17 @@ public class Plane {
     private String model;
     private String color;
     private double maxSpeed;
-    private boolean propeller;
-    private boolean airframe;
-    private boolean wings;
+    private boolean hasPropeller;
+    private boolean hasAirframe;
+    private boolean hasWings;
 
     private Plane(PlaneBuilder builder) {
         this.model = builder.model;
         this.color = builder.color;
         this.maxSpeed = builder.maxSpeed;
-        this.propeller = builder.propeller;
-        this.airframe = builder.airframe;
-        this.wings = builder.wings;
+        this.hasPropeller = builder.hasPropeller;
+        this.hasAirframe = builder.hasAirframe;
+        this.hasWings = builder.hasWings;
     }
 
     @Override
@@ -23,9 +23,9 @@ public class Plane {
                     + "model='" + model + '\''
                     + ", color='" + color + '\''
                     + ", maxSpeed=" + maxSpeed
-                    + ", propeller=" + propeller
-                    + ", airframe=" + airframe
-                    + ", wings=" + wings
+                    + ", hasAirframe=" + hasPropeller
+                    + ", hasAirframe=" + hasAirframe
+                    + ", hasWings=" + hasWings
                     + '}';
     }
 
@@ -33,14 +33,14 @@ public class Plane {
         private String model;
         private String color;
         private double maxSpeed;
-        private boolean propeller;
-        private boolean airframe;
-        private boolean wings;
+        private boolean hasPropeller;
+        private boolean hasAirframe;
+        private boolean hasWings;
 
-        public PlaneBuilder(boolean propeller, boolean airframe, boolean wings) {
-            this.wings = wings;
-            this.propeller = propeller;
-            this.airframe = airframe;
+        public PlaneBuilder(boolean hasPropeller, boolean hasAirframe, boolean hasWings) {
+            this.hasWings = hasWings;
+            this.hasPropeller = hasPropeller;
+            this.hasAirframe = hasAirframe;
         }
 
         public PlaneBuilder setModel(String model) {
@@ -58,25 +58,25 @@ public class Plane {
             return this;
         }
 
-        public PlaneBuilder setPropeller(boolean propeller) {
-            this.propeller = propeller;
+        public PlaneBuilder setPropeller(boolean hasPropeller) {
+            this.hasPropeller = hasPropeller;
             return this;
         }
 
-        public PlaneBuilder setAirframe(boolean airframe) {
-            this.airframe = airframe;
+        public PlaneBuilder setAirframe(boolean hasAirframe) {
+            this.hasAirframe = hasAirframe;
             return this;
         }
 
-        public PlaneBuilder setWings(boolean wings) {
-            this.wings = wings;
+        public PlaneBuilder setWings(boolean hasWings) {
+            this.hasWings = hasWings;
             return this;
         }
 
         public Plane build() {
-            if (this.airframe == false
-                                 || this.propeller == false
-                                 || this.wings == false) {
+            if (this.hasAirframe == false
+                                 || this.hasPropeller == false
+                                 || this.hasWings == false) {
                 throw new RuntimeException("Can't create Plane without airframe/propeller/wings");
             }
             return new Plane(this);
