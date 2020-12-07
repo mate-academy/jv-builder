@@ -60,5 +60,4 @@ public class Plane {
             return new Plane(this);
         }
     }
-
 }
