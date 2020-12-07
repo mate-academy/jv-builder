@@ -10,6 +10,6 @@ public class BuilderTestApp {
                 .setIsIntercontinental(true)
                 .setHasBusinessClass(false)
                 .build();
-        plane.toString();
+        System.out.println(plane.toString());
     }
 }
