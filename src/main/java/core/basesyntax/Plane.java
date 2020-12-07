@@ -55,7 +55,7 @@ public class Plane {
     @Override
     public String toString() {
         return "Company name: " + nameCompany + "\nModel: " + model
-                + "\nPower: " + power + "\nisFirstClass: " + isFirstClass
+                + "\nPower: " + power + "\nIs the First class: " + isFirstClass
                 + "\nCountry connect: " + countryConnect;
     }
 }
