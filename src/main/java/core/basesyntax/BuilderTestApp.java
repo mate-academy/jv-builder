@@ -1,7 +1,12 @@
 package core.basesyntax;
 
 public class BuilderTestApp {
-  public static void main(String[] args) {
-      // Remove this comment and test your Builder implementation here...
-  }
+    public static void main(String[] args) {
+        Plane boeing = new Plane.PlaneBuilder().setModel("Boeing 747")
+                .setColor("Red with white stripes")
+                .setYear(1990)
+                .setPassengersCapacity(452)
+                .setEngineThrust(22.6).build();
+        System.out.println(boeing.toString());
+    }
 }
