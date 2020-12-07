@@ -7,7 +7,7 @@ public class Plane {
     private int seats;
     private int year;
 
-    public Plane(PlaneBuilder builder) {
+    private Plane(PlaneBuilder builder) {
         this.name = builder.name;
         this.model = builder.model;
         this.horsePower = builder.horsePower;
