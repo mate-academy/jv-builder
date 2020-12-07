@@ -2,12 +2,12 @@ package core.basesyntax;
 
 public class Plane {
 
-    private final String name;
-    private final String model;
-    private final boolean isAirliner;
-    private final int numberOfSits;
-    private final int numberOfEngines;
-    private final int enginePower;
+    private String name;
+    private String model;
+    private boolean isAirliner;
+    private int numberOfSits;
+    private int numberOfEngines;
+    private int enginePower;
 
     private Plane(PlaneBuilder planeBuilder) {
         this.name = planeBuilder.name;
