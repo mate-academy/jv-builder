@@ -1,11 +1,11 @@
 package core.basesyntax;
 
 public class Plane {
-    private final int year;
-    private final int numberOfEngines;
-    private final int range;
-    private final int numberOfPassengers;
-    private final String name;
+    private int year;
+    private int numberOfEngines;
+    private int range;
+    private int numberOfPassengers;
+    private String name;
 
     private Plane(PlaneBuilder builder) {
         this.name = builder.name;
@@ -20,7 +20,6 @@ public class Plane {
                 .append(year).append(", number of engines: ").append(numberOfEngines)
                 .append(", flying range (in km): ").append(range).append(", number of passengers: ")
                 .append(numberOfPassengers).toString();
-
     }
 
     public static class PlaneBuilder {
