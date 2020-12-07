@@ -15,6 +15,7 @@ public class Plane {
         this.color = builder.color;
         this.capacity = builder.capacity;
         this.range = builder.range;
+        this.year = builder.year;
         this.celling = builder.celling;
     }
 

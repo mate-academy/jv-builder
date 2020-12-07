@@ -8,7 +8,7 @@ public class BuilderTestApp {
                 .setYear(2018)
                 .setCapacity(480)
                 .build();
-        System.out.println(boeing747.toString());
+        System.out.println(boeing747);
 
         Plane.PlaneBuilder airbus = new Plane.PlaneBuilder()
                 .setColor("White")
