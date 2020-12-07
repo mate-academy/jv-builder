@@ -7,7 +7,7 @@ public class Plane {
     private int maxSpeed;
     private int maxHeight;
 
-    public Plane(PlaneBuilder builder) {
+    private Plane(PlaneBuilder builder) {
         this.model = builder.model;
         this.type = builder.type;
         this.capacity = builder.capacity;
