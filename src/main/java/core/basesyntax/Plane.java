@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Plane {
-
     private String airPlaneType;
     private String name;
     private String color;
@@ -10,14 +9,13 @@ public class Plane {
     private int celling;
     private int year;
 
-    public Plane(PlaneBuilder builder) {
+    private Plane(PlaneBuilder builder) {
         this.airPlaneType = builder.airPlaneType;
         this.name = builder.name;
         this.color = builder.color;
         this.capacity = builder.capacity;
         this.range = builder.range;
         this.celling = builder.celling;
-        this.year = builder.year;
     }
 
     public static class PlaneBuilder {
@@ -28,6 +26,10 @@ public class Plane {
         private int range;
         private int celling;
         private int year;
+
+        public PlaneBuilder(String airPlaneType) {
+            this.airPlaneType = airPlaneType;
+        }
 
         public PlaneBuilder setCelling(int celling) {
             this.celling = celling;
