@@ -13,7 +13,6 @@ public class Plane {
         this.year = builder.year;
         this.company = builder.company;
         this.seatPassengers = builder.seatPassengers;
-
     }
 
     @Override
