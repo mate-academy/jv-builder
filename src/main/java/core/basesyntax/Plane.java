@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Plane {
-
     private String name;
     private String model;
     private boolean isAirliner;
@@ -30,7 +29,6 @@ public class Plane {
     }
 
     public static class PlaneBuilder {
-
         private String name;
         private String model;
         private boolean isAirliner;
