@@ -19,7 +19,7 @@ public class Plane {
 
     @Override
     public String toString() {
-        return new StringBuilder().append("Builder{")
+        return "Builder{"
                     + "model='" + model + '\''
                     + ", color='" + color + '\''
                     + ", maxSpeed=" + maxSpeed
