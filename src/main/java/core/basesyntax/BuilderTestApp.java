@@ -18,7 +18,7 @@ public class BuilderTestApp {
                 .setWeight(600)
                 .build();
 
-        System.out.println(firstPlane.toString());
-        System.out.println(secondPlane.toString());
+        System.out.println(firstPlane);
+        System.out.println(secondPlane);
     }
 }
