@@ -54,12 +54,9 @@ public class Plane {
 
     @Override
     public String toString() {
-        return "Plane{"
-                + "model='" + model + '\''
-                + ", height=" + height
-                + ", weight=" + weight
-                + ", maxSpeed=" + maxSpeed
-                + ", maxHeight=" + maxHeight
-                + '}';
+        return "Plane{" + "model='" + model + '\''
+                + ", height=" + height + ", weight=" + weight
+                + ", maxSpeed=" + maxSpeed + ", maxHeight="
+                + maxHeight + '}';
     }
 }
