@@ -10,6 +10,6 @@ public class BuilderTestApp {
                 .setRange(200)
                 .build();
 
-        System.out.println(firstPlane.toString());
+        System.out.println(firstPlane);
     }
 }

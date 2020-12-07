@@ -19,14 +19,10 @@ public class Plane {
     public String toString() {
         return "Plane{"
                 + "model='" + model + '\''
-                + ", capacity='" + capacity
-                + '\''
-                + ", type='"
-                + type + '\''
-                + ", year="
-                + year
-                + ", range="
-                + range
+                + ", capacity='" + capacity + '\''
+                + ", type='" + type + '\''
+                + ", year=" + year
+                + ", range=" + range
                 + '}';
     }
 
