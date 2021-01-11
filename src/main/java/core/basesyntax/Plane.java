@@ -41,13 +41,13 @@ public class Plane {
             return this;
         }
 
-        public PlaneBuilder setSpeed(int speed) {
-            this.speed = speed;
+        public PlaneBuilder setWeight(int weight) {
+            this.weight = weight;
             return this;
         }
 
-        public PlaneBuilder setWeight(int weight) {
-            this.weight = weight;
+        public PlaneBuilder setSpeed(int speed) {
+            this.speed = speed;
             return this;
         }
 
