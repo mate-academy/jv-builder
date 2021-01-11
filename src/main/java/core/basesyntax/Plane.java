@@ -31,9 +31,12 @@ public class Plane {
     @Override
     public String toString() {
         return "Plane{"
-                + "name='" + name + '\'' + ", year=" + year
-                + ", price=" + price + ", color='" + color
-                + '\'' + ", age=" + age + '}';
+                + "name='" + name
+                + '\'' + ", year="
+                + year + ", price="
+                + price + ", color='"
+                + color + '\'' + ", age="
+                + age + '}';
     }
 
     public static class PlaneBuilder {
