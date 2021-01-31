@@ -98,13 +98,17 @@ public class PlaneTest {
         List<Field> planeFields = Arrays.asList(Plane.class.getDeclaredFields());
         Assert.assertFalse(planeFields.isEmpty());
 
-        List<Constructor<?>> constructors = Arrays.asList(Plane.class.getConstructors());
-        Assert.assertEquals("You should have only one constructor in the Plane.class", constructors.size(), 1);
+        List<Constructor<?>> constructors = Arrays.asList(Plane.class.getDeclaredConstructors());
+        Assert.assertEquals("You should have only one constructor in the Plane.class", 1, constructors.size());
 
         int actualParameterCount = constructors.get(0).getParameterCount();
-        int expectedParameterCount = planeFields.size();
 
-        Assert.assertEquals("You have a constructor with all fields that exists in the plane",
-                actualParameterCount, expectedParameterCount);
+        Assert.assertEquals("Your constructor should have one parameter",
+                1, actualParameterCount);
+
+        Class<?> actualConstructorParameterType = constructors.get(0).getParameterTypes()[0];
+        Class<?> expectedPlaneBuilderClass = Plane.class.getClasses()[0];
+        Assert.assertEquals("Your constructor should have one parameter of PlaneBuilder class",
+                expectedPlaneBuilderClass, actualConstructorParameterType);
     }
 }
